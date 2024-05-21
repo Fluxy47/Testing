@@ -201,20 +201,20 @@ function Testing({ setIsDirect, setIsVisible }) {
         <div className="desktopPhotos w-[40vw] h-[40vw] 2xl:w-[30vw] 2xl:h-[30vw]">
           <div
             className="desktopPhoto red"
-            onClick={() => handleRoute("project1")}></div>
+            onClick={() => handleRoute("/work/SenCity")}></div>
           <div
             className="desktopPhoto green"
             onClick={() => handleRoute("/work/Scary-Teacher-Stone-Age")}></div>
           <div
             className="desktopPhoto pink"
-            onClick={() => handleRoute("project3")}></div>
+            onClick={() => handleRoute("work/Scary-Teacher")}></div>
           <div
             className="desktopPhoto blue"
-            onClick={() => handleRoute("project4")}></div>
+            onClick={() => handleRoute("/work/Jam-Master")}></div>
+          <div
+            className="desktopPhoto yellow"
+            onClick={() => handleRoute("/work/Dino-Rescue")}></div>
         </div>
-        {/* <div
-          className="desktopPhoto yellow"
-          onClick={() => handleRoute("project5")}></div> */}
       </div>
     </div>
   );

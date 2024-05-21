@@ -12,6 +12,8 @@ import ScaryTeacher from "../layouts/ScaryTeacher";
 import SenCity from "../layouts/SenCity";
 import StoneAge from "../layouts/StoneAge";
 
+import useDrivePicker from "react-google-drive-picker";
+
 gsap.registerPlugin(ScrollTrigger);
 
 function ProjectLayout({ setIsVisible, setIsDirect }) {
@@ -64,6 +66,29 @@ function ProjectLayout({ setIsVisible, setIsDirect }) {
       ScrollTrigger.getAll().forEach((instance) => instance.kill());
     };
   }, []);
+
+  const [openPicker, authResponse] = useDrivePicker();
+  // const customViewsArray = [new google.picker.DocsView()]; // custom view
+  const handleOpenPicker = () => {
+    openPicker({
+      clientId:
+        "354629769567-vujo7j0gjsk8dhosllu9veppphlfcjdo.apps.googleusercontent.com",
+      developerKey: "AIzaSyDhgxa08nqbCKlWVTMByn4C1kYHJRVx0Z8",
+      viewId: "DOCS",
+      // token: token, // pass oauth token in case you already have one
+      showUploadView: true,
+      showUploadFolders: true,
+      supportDrives: true,
+      multiselect: true,
+      // customViews: customViewsArray, // custom view
+      callbackFunction: (data) => {
+        if (data.action === "cancel") {
+          console.log("User clicked cancel/close button");
+        }
+        console.log(data);
+      },
+    });
+  };
 
   return (
     <div className="min-h-screen text-black ">

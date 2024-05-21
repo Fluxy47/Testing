@@ -130,7 +130,11 @@ function About({ setIsVisible, setIsDirect }) {
             <div
               ref={imageCont}
               className="overflow-hidden border-2 border-red-950 w-full lg:max-w-[60%] mr-[15px] flex justify-center">
-              <img ref={imageRef} src={aboutpic} className=" w-full" />
+              <img
+                ref={imageRef}
+                src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/aboutpic.jpg?tr=w-1200"
+                className=" w-full"
+              />
             </div>
           </section>
         </div>

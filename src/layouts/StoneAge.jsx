@@ -40,10 +40,23 @@ function StoneAge() {
   //   });
   // }, [hasPlayed]);
 
+  // src: "https://ik.imagekit.io/fluxy/DesignProject/arr5.jpg?tr=w-1200",
+  //   srcset: `
+  //     https://ik.imagekit.io/fluxy/DesignProject/arr5.jpg?tr=w-400 400w,
+  //     https://ik.imagekit.io/fluxy/DesignProject/arr5.jpg?tr=w-800 800w,
+  //     https://ik.imagekit.io/fluxy/DesignProject/arr5.jpg?tr=w-1200 1200w
+  //   `,
+
   return (
     <div className="pb-[250px]">
       <div className="flex justify-center items-center mt-[7em] min-h-screen relative">
-        <img src={Main} className="h-screen w-full max-w-[85vw] rounded-3xl" />
+        <img
+          src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/image.png?tr=w-1200"
+          srcSet="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/image.png?tr=w-400 400w 
+          https://ik.imagekit.io/fluxy/Asad%20Folder/Images/image.png?tr=w-800 800w
+          https://ik.imagekit.io/fluxy/Asad%20Folder/Images/image.png?tr=w-12s00 1200w"
+          className="h-screen w-full max-w-[85vw] rounded-3xl"
+        />
       </div>
 
       <div className="flex justify-center items-center mt-[15em] min-h-screen ">
@@ -54,7 +67,10 @@ function StoneAge() {
           muted
           playsInline
           controls={true}>
-          {/* <source src={gameplay} type="video/mp4" /> */}
+          <source
+            src="https://drive.google.com/file/d/1ru0r8wKKGvH3_gScgbNQrsw6D6IJYnTI/view"
+            type="video/mp4"
+          />
         </video>
       </div>
 

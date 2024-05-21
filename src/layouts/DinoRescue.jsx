@@ -11,7 +11,14 @@ function DinoRescue() {
   return (
     <div className="pb-[250px] max-w-[85vw] mx-auto">
       <div className="flex justify-center items-center mt-[7em] min-h-screen relative">
-        <img src={Main} className="h-screen w-full  rounded-3xl" />
+        <img
+          src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/Dino%20Rescue%20(2).png?tr=w-1200"
+          srcSet="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/Dino%20Rescue%20(2).png?tr=w-400 400w
+          https://ik.imagekit.io/fluxy/Asad%20Folder/Images/Dino%20Rescue%20(2).png?tr=w-800 800w
+          https://ik.imagekit.io/fluxy/Asad%20Folder/Images/Dino%20Rescue%20(2).png?tr=w-1200 1200w
+          "
+          className="h-screen w-full  rounded-3xl"
+        />
       </div>
 
       <div className="flex justify-center items-center mt-[15em] max-w-[85vw] h-[90dvh] ">

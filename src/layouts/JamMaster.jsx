@@ -8,7 +8,13 @@ function JamMaster() {
   return (
     <div className="pb-[250px] max-w-[85vw] mx-auto">
       <div className="flex justify-center items-center mt-[7em] min-h-screen relative">
-        <img src={Main} className="h-screen w-full  rounded-3xl" />
+        <img
+          src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/image_2022_04_18T10_54_30_850Z.png?tr=w-1200"
+          srcSet="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/image_2022_04_18T10_54_30_850Z.png?tr=w-400 400w
+          https://ik.imagekit.io/fluxy/Asad%20Folder/Images/image_2022_04_18T10_54_30_850Z.png?tr=w-800 800w
+          https://ik.imagekit.io/fluxy/Asad%20Folder/Images/image_2022_04_18T10_54_30_850Z.png?tr=w-1200 1200w"
+          className="h-screen w-full  rounded-3xl"
+        />
       </div>
 
       {/* <div className="flex justify-center items-center mt-[15em] min-h-screen ">

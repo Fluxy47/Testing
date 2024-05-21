@@ -10,7 +10,7 @@ export const ProjectArr = [
     name: "SenCity",
     status: "Live Project",
     nextRoute: "/work/Scary-Teacher-Stone-Age",
-    img: Stoneage,
+    img: "https://ik.imagekit.io/fluxy/Asad%20Folder/Images/2.png?tr=w-800",
     nextName: "Scary Teacher Stone Age",
     Intro:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
@@ -20,7 +20,7 @@ export const ProjectArr = [
     name: "Scary Teacher Stone Age",
     status: "Live Project",
     nextRoute: "/work/Jam-Master",
-    img: JamMaster,
+    img: "https://ik.imagekit.io/fluxy/Asad%20Folder/Images/image_2022_04_18T10_54_30_850Z.png?tr=w-800",
     nextName: "Jam Master",
     Intro:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
@@ -31,7 +31,7 @@ export const ProjectArr = [
     name: "Jam Master",
     status: "Live Project",
     nextRoute: "/work/Dino-Rescue",
-    img: DinoRescue,
+    img: "https://ik.imagekit.io/fluxy/Asad%20Folder/Images/Dino%20Rescue%20(2).png?tr=w-800",
     nextName: "Dino Rescue",
     Intro:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
@@ -42,7 +42,7 @@ export const ProjectArr = [
     name: "Dino Rescue",
     status: "Project APK",
     nextRoute: "/work/Scary-Teacher",
-    img: ScaryTeacher,
+    img: "https://ik.imagekit.io/fluxy/Asad%20Folder/Images/3d.png?tr=w-800",
     nextName: "Scary Teacher 3D",
     Intro:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
@@ -53,7 +53,7 @@ export const ProjectArr = [
     name: "Scary Teacher 3D",
     status: "Live Project",
     nextRoute: "/work/SenCity",
-    img: SenCity,
+    img: "https://ik.imagekit.io/fluxy/Asad%20Folder/Images/sen%20city.jpg?tr=w-800",
     nextName: "SenCity",
     Intro:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",

@@ -22,7 +22,7 @@ const arr = [
     route: "/work/SenCity",
   },
   {
-    src: Stoneage,
+    src: "https://ik.imagekit.io/fluxy/Asad%20Folder/Images/2.png?tr=w-800",
     Name: "Scary Teacher Stone Age",
     route: "/work/Scary-Teacher-Stone-Age",
   },
