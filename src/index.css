@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Make scrollbar transparent */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  display: flex;
+  white-space: nowrap;
+  width: 100%;
+  height: clamp(3em, 10vw, 6em);
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.pointer {
+  position: relative;
+  text-align: center;
+}
+
+.pointer img {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.screen-log {
+  position: absolute;
+  bottom: -3rem;
+  width: 300%;
+  left: -100%;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0f0f0f;
+  transform-origin: bottom;
+}
+
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0f0f0f;
+  transform-origin: top;
+}
+
+/* bg-[gray] max-h-[450px] w-full min-w-[350px] flex justify-center items-center */
+.carousel-item2 {
+  background: gray;
+  max-height: 450px;
+  width: 100%;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container {
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+  max-width: calc(100% - 2.5%);
+}
+
+.carousel-item {
+  position: absolute;
+}
+
+.wrapper-container {
+  position: relative;
+}
+
+.sticky-element {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.track {
+  width: fit-content;
+  flex: 0 0 auto;
+  padding-inline: 50%;
+}
+
+.track-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 85vh;
+}
+
+.panel-wide {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  flex: 0 0 auto;
+  background: blue;
+}
+
+.panel-wide img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+}
+
+.panel-wide::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  z-index: 1;
+  border: 1px solid green;
+}
+
+.half-height .track-flex {
+  gap: 2rem;
+}
+
+.gallery h1 {
+  font-size: clamp(2em, 4vw, 6em);
+}
+
+.gallery p {
+  font-size: clamp(1.1em, 1.7vw, 2.5em);
+  line-height: 1.4;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  /* outline:1px solid red; */
+}
+
+.left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.right {
+  height: 100vh;
+  /* outline:1px solid purple; */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.desktopContent {
+  margin: auto;
+  width: 80%;
+}
+
+.desktopContentSection {
+  min-height: 100vh;
+  /* outline:1px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.desktopPhotos {
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.desktopPhoto {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.red {
+  background: url("src/assets/SenCity.webp") no-repeat center center;
+  background-size: cover; /* Optional: Ensure the image covers the entire div */
+  cursor: pointer;
+}
+
+.green {
+  background: url("src/assets/StoneAge.webp") no-repeat center center;
+  background-size: cover; /* Optional: Ensure the image covers the entire div */
+  cursor: pointer;
+}
+
+.blue {
+  background: url("src/assets/JamMaster.png") no-repeat center center;
+  background-size: cover; /* Optional: Ensure the image covers the entire div */
+  cursor: pointer;
+}
+
+.pink {
+  background: url("src/assets/ScaryTeacher.webp") no-repeat center center;
+  background-size: cover; /* Optional: Ensure the image covers the entire div */
+  cursor: pointer;
+}
+
+.yellow {
+  background: url("src/assets/DinoRescue.png") no-repeat center center;
+  background-size: cover; /* Optional: Ensure the image covers the entire div */
+  cursor: pointer;
+}
+
+/* small screen / mobile layout */
+.mobileContent {
+  display: none;
+  width: 80vw;
+}
+
+.mobilePhoto {
+  width: 80vw;
+  height: 80vw;
+  margin-top: 5em;
+  border-radius: 6vw;
+}
+
+/* defines styles for screens up to 599px wide */
+@media screen and (max-width: 599px) {
+  .left {
+    display: none;
+  }
+
+  .right {
+    height: auto;
+    width: 100%;
+    align-items: center;
+  }
+
+  .desktopPhotos {
+    display: none;
+  }
+
+  .mobileContent {
+    display: block;
+  }
+}
+/* .picclass {
+  background-image: url("src/assets/pic2.png");
+  object-fit: cover;
+  background-repeat: no-repeat;
+} */
