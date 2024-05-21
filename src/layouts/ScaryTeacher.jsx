@@ -9,7 +9,7 @@ import Video from "../assets/ScaryTeacher/Video.mp4";
 
 function ScaryTeacher() {
   return (
-    <div className="pb-[250px] max-w-[85vw] mx-auto">
+    <div className="pb-[250px] w-full max-w-[90vw] md:max-w-[85vw] mx-auto">
       <div className="flex justify-center items-center mt-[7em] min-h-screen relative">
         <img
           src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/3d.png?tr=w-1200"
@@ -22,9 +22,9 @@ function ScaryTeacher() {
         />
       </div>
 
-      <div className="flex justify-center items-center mt-[15em] min-h-screen ">
+      <div className="flex justify-center items-center md:mt-[15em] min-h-screen ">
         <video
-          className="w-full max-w-[85vw] h-full border-4 border-black rounded-3xl"
+          className="w-full max-w-[90vw] md:max-w-[85vw] h-full border-4 border-black rounded-3xl"
           autoPlay
           loop
           muted
@@ -34,14 +34,14 @@ function ScaryTeacher() {
         </video>
       </div>
 
-      <section className="flex items-center justify-evenly mt-[15em] w-full mb-[10em] ">
-        <div className="h-[80vh] w-[40vw] ">
+      <section className="flex flex-col md:flex-row items-center justify-evenly md:mt-[15em] gap-y-[3em] md:gap-y-0 w-full mb-[10em] ">
+        <div className="h-[80vh] w-[90vw] md:w-[40vw] ">
           <img
             src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/1.png?tr=w-1200"
             className="object-fit h-full w-full rounded-3xl"
           />
         </div>
-        <div className="h-[80vh] w-[40vw]  flex justify-center">
+        <div className="h-[80vh] w-[90vw] md:w-[40vw]  flex justify-center">
           {" "}
           <img
             src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/ScaryTeacher%203D/2.png?tr=w-1200"
@@ -50,14 +50,14 @@ function ScaryTeacher() {
         </div>
       </section>
 
-      <section className="flex items-center justify-evenly mt-[15em] w-full mb-[10em] ">
-        <div className="h-[80vh] w-[40vw] ">
+      <section className="flex flex-col md:flex-row items-center justify-evenly  md:mt-[15em] w-full mb-[10em] gap-y-[3em] md:gap-y-0 ">
+        <div className="h-[80vh] w-[90vw] md:w-[40vw] ">
           <img
             src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/ScaryTeacher%203D/5.png?tr=w-1200"
             className="object-fit h-full w-full rounded-3xl"
           />
         </div>
-        <div className="h-[80vh] w-[40vw]  flex justify-center">
+        <div className="h-[80vh] w-[90vw] md:w-[40vw] flex justify-center">
           {" "}
           <img
             src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/ScaryTeacher%203D/3.png?tr=w-1200"

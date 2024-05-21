@@ -68,14 +68,11 @@ function Testing({ setIsDirect, setIsVisible }) {
     });
   }, []);
 
-  console.log("window", window.innerWidth);
-  console.log("window1212", window.outerWidth);
-
-  const handleRoute = (project) => {
+  const handleRoute = (route) => {
     setIsDirect(true);
     setIsVisible(true);
     setTimeout(() => {
-      navigate(`/work/${project}`);
+      navigate(route);
     }, 1500);
   };
 
@@ -144,7 +141,9 @@ function Testing({ setIsDirect, setIsVisible }) {
       <div className="right">
         {/* <!-- mobile content --> */}
         <div className="mobileContent">
-          <div className="mobilePhoto red"></div>
+          <div
+            className="mobilePhoto red"
+            onClick={() => handleRoute("/work/SenCity")}></div>
           <h1>Sen City</h1>
           <p>
             Red is a color often associated with strong emotions such as
@@ -152,7 +151,9 @@ function Testing({ setIsDirect, setIsVisible }) {
             that can evoke feelings of excitement, warmth, and energy.
           </p>
 
-          <div className="mobilePhoto green"></div>
+          <div
+            className="mobilePhoto green"
+            onClick={() => handleRoute("/work/Scary-Teacher-Stone-Age")}></div>
           <h1>Scary Teacher Stone Age</h1>
           <p>
             Green is a color that is often associated with nature, growth, and
@@ -162,7 +163,9 @@ function Testing({ setIsDirect, setIsVisible }) {
             for branding and marketing in the health and wellness industry.{" "}
           </p>
 
-          <div className="mobilePhoto pink"></div>
+          <div
+            className="mobilePhoto pink"
+            onClick={() => handleRoute("work/Scary-Teacher")}></div>
           <h1>Scary Teacher 3D</h1>
           <p>
             Pink is a color that is often associated with femininity, romance,
@@ -173,7 +176,9 @@ function Testing({ setIsDirect, setIsVisible }) {
             love, or romance.
           </p>
 
-          <div className="mobilePhoto blue"></div>
+          <div
+            className="mobilePhoto blue"
+            onClick={() => handleRoute("/work/Jam-Master")}></div>
           <h1>JamMaster</h1>
           <p>
             Blue is a color that is often associated with calmness, trust, and
@@ -184,7 +189,9 @@ function Testing({ setIsDirect, setIsVisible }) {
             technology industries.
           </p>
 
-          <div className="mobilePhoto yellow"></div>
+          <div
+            className="mobilePhoto yellow"
+            onClick={() => handleRoute("/work/Dino-Rescue")}></div>
           <h1>Dino Rescue</h1>
           <p>
             Blue is a color that is often associated with calmness, trust, and

@@ -208,7 +208,7 @@ function SideBar({ setIsVisible, setIsDirect }) {
         }}
         transition={{ transform: { duration: 0.8, ease: [0.7, 0, 0.2, 1] } }}
         className="fixed right-0 h-screen w-full lg:w-2/6 z-[99] bg-[#141517]">
-        <div className="absolute flex flex-col justify-evenly items-center w-full h-full">
+        <div className=" absolute flex flex-col justify-evenly items-center w-full h-full">
           <div className="  max-h-[60vh] relative z-[98]  min-w-[60%] h-full flex flex-col  items-start gap-[0.5em]">
             <p className="text-[#adb4b6] mb-[1em]">Navigation</p>
             <div className="h-[1px] w-full bg-[#adb4b6] mb-[2em]" />
@@ -229,7 +229,10 @@ function SideBar({ setIsVisible, setIsDirect }) {
                 <button onClick={() => handleNavigation(item.route)}>
                   <h1
                     ref={elementsRef.current[idx]}
-                    className="text-[4em] text-white">
+                    style={{
+                      fontSize: "clamp(2rem, 1.4737rem + 2.6316vw, 4rem)",
+                    }}
+                    className=" text-white">
                     {item.name}
                   </h1>
                 </button>

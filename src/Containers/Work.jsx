@@ -56,7 +56,7 @@ function Work({ setIsVisible, setIsDirect }) {
         setIsDirect={setIsDirect}
       />
       <section
-        className="  mt-[12em]"
+        className=" mt-[12em]"
         style={{
           paddingLeft: `calc(clamp(clamp(2.5em, 8vw, 8em)) * 2)`,
           paddingRight: "calc(clamp(2.5em, 8vw, 8em)) * 2)",

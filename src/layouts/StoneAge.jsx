@@ -61,9 +61,9 @@ function StoneAge() {
         />
       </div>
 
-      <div className="flex justify-center items-center mt-[15em] min-h-screen ">
+      <div className="flex justify-center items-center md:mt-[15em] min-h-screen ">
         <video
-          className="w-full max-w-[85vw] h-full border-4 border-black rounded-3xl"
+          className="w-full max-w-[90vw] md:max-w-[85vw] h-full border-4 border-black rounded-3xl"
           autoPlay
           loop
           muted
@@ -73,21 +73,21 @@ function StoneAge() {
         </video>
       </div>
 
-      <section className="flex items-center justify-evenly mt-[15em] w-full mb-[10em] ">
-        <div className="h-[80vh] w-[40vw] ">
+      <section className="flex flex-col md:flex-row items-center justify-evenly gap-y-[3em] md:mt-[15em] w-full mb-[10em] ">
+        <div className="h-[80vh] w-[90vw] md:w-[40vw] ">
           <img src={pic1} className="object-fit h-full w-full rounded-3xl" />
         </div>
-        <div className="h-[80vh] w-[40vw]  flex justify-center">
+        <div className="h-[80vh] w-[90vw] md:w-[40vw] flex justify-center">
           {" "}
           <img src={pic2} className="object-fit h-full w-full rounded-3xl" />
         </div>
       </section>
 
-      <section className="flex items-center justify-evenly mt-[15em] w-full mb-[10em] ">
-        <div className="h-[80vh] w-[40vw] ">
+      <section className="flex flex-col md:flex-row items-center justify-evenly gap-y-[3em] md:mt-[15em] w-full mb-[10em] ">
+        <div className="h-[80vh] w-[90vw] md:w-[40vw] ">
           <img src={pic3} className="object-fit h-full w-full rounded-3xl" />
         </div>
-        <div className="h-[80vh] w-[40vw]  flex justify-center">
+        <div className="h-[80vh] w-[90vw] md:w-[40vw]  flex justify-center">
           {" "}
           <img src={pic4} className="object-fit h-full w-full rounded-3xl" />
         </div>

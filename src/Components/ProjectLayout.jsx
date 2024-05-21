@@ -21,6 +21,7 @@ function ProjectLayout({ setIsVisible, setIsDirect }) {
   console.log("project", currentProject);
   const location = useLocation();
   const pathname = location.pathname;
+  console.log("asd", pathname);
   let path = pathname.substring(6);
 
   useEffect(() => {
@@ -28,7 +29,7 @@ function ProjectLayout({ setIsVisible, setIsDirect }) {
       (project) => project.identifier === path
     );
     setCurrentProject(matchingProject);
-  }, [path]); // Update only when path changes
+  }, []); // Update only when path changes
 
   const handleRoute = (route) => {
     setIsDirect(true);
@@ -67,30 +68,6 @@ function ProjectLayout({ setIsVisible, setIsDirect }) {
     };
   }, []);
 
-  const [openPicker, authResponse] = useDrivePicker();
-  // const customViewsArray = [new google.picker.DocsView()]; // custom view
-
-  const handleOpenPicker = () => {
-    openPicker({
-      clientId:
-        "354629769567-vujo7j0gjsk8dhosllu9veppphlfcjdo.apps.googleusercontent.com",
-      developerKey: "AIzaSyDhgxa08nqbCKlWVTMByn4C1kYHJRVx0Z8",
-      viewId: "DOCS",
-      // token: token, // pass oauth token in case you already have one
-      showUploadView: true,
-      showUploadFolders: true,
-      supportDrives: true,
-      multiselect: true,
-      // customViews: customViewsArray, // custom view
-      callbackFunction: (data) => {
-        if (data.action === "cancel") {
-          console.log("User clicked cancel/close button");
-        }
-        console.log(data);
-      },
-    });
-  };
-
   console.log("hi", currentProject?.link);
 
   return (
@@ -101,28 +78,34 @@ function ProjectLayout({ setIsVisible, setIsDirect }) {
           {currentProject?.name}
         </h1>
 
-        <section className="flex items-center justify-center gap-[3em] mt-[5em] w-full">
-          <div className="flex flex-col gap-[2em] items-start w-full max-w-[20em]">
+        <section className=" flex flex-col md:flex-row items-center justify-center gap-[3em] mt-[5em] w-full">
+          <div className=" mx-[15px] md:mx-0 flex flex-col gap-[1em] md:gap-[2em] items-start w-full max-w-[20em]">
             <p className="text-[0.7em] text-[#999D9E]">ROLE / SERVICES</p>
             <div className="h-[1px] w-full bg-[#adb4b6]" />
-            <h2 className="text-base font-semibold">Design & Development</h2>
+            <h2 className=" text-[0.8em] md:text-base font-semibold">
+              Design & Development
+            </h2>
           </div>
-          <div className="flex flex-col gap-[2em] items-start  w-full max-w-[20em]">
+          <div className="flex flex-col gap-[2em] items-start  w-full md:max-w-[20em]">
             <p className="text-[0.7em] text-[#999D9E]">Genre</p>
             <div className="h-[1px] w-full bg-[#999D9E]" />
-            <h2 className="text-base font-semibold">{currentProject?.genre}</h2>
+            <h2 className="text-[0.8em] md:text-base font-semibold">
+              {currentProject?.genre}
+            </h2>
           </div>
-          <a
+          {/* <a
             href={currentProject?.link}
             target="_blank"
             className="w-52 h-52 bg-[#455CE9] rounded-full flex justify-center items-center cursor-pointer">
             <a className="text-white font-semibold">{currentProject?.status}</a>
-          </a>
+          </a> */}
         </section>
       </div>
 
-      <div className=" w-[80vw] mx-auto mt-[5em] text-lg">
-        <h1 className="text-3xl font-[450]">{currentProject?.Intro}</h1>
+      <div className=" md:w-[80vw] mx-[15px] md:mx-auto mt-[5em] text-lg">
+        <h1 className=" text-[1em] md:text-3xl font-[450]">
+          {currentProject?.Intro}
+        </h1>
       </div>
       {path === "SenCity" && <SenCity />}
       {path === "Scary-Teacher-Stone-Age" && <StoneAge />}

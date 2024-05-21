@@ -56,7 +56,7 @@ function Footer() {
             </h1>
           </a>
         </div>
-        <div className="flex flex-col md:flex-row gap-[3em]">
+        <div className="flex flex-col md:flex-row gap-[3em] md:mt-0 mt-[2em]">
           <button
             ref={circleAnimate2}
             className="w-72 h-20 relative rounded-full border-[1px] bg-transparent text-white font-[450] text-lg overflow-hidden">
@@ -73,14 +73,15 @@ function Footer() {
           </button>
           <button
             ref={circleAnimate3}
-            className="w-72 h-20 relative rounded-full overflow-hidden border-[1px] bg-transparent text-white font-[450] text-lg  ">
+            className="w-72 h-20 relative rounded-full border-[1px] bg-transparent text-white font-[450] text-lg overflow-hidden">
             <div
               ref={overlayRef2}
               className="w-full h-full relative  bg-[#455CE9] rounded-full translate-y-full"
             />
+
             <span
               ref={TextAnimate3}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               + 44 7774069318
             </span>
           </button>

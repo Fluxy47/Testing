@@ -179,7 +179,6 @@
 
 .desktopContentSection {
   min-height: 100vh;
-  /* outline:1px solid green; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -203,6 +202,7 @@
     no-repeat center center;
   background-size: cover; /* Optional: Ensure the image covers the entire div */
   cursor: pointer;
+  object-fit: contain;
 }
 
 .green {

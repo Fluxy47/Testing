@@ -27,7 +27,7 @@ function DinoRescue() {
         />
       </div>
 
-      <div className="flex justify-center items-center mt-[15em] max-w-[85vw] h-[90dvh] ">
+      <div className="flex justify-center items-center md:mt-[15em] mt-[3em] max-w-[85vw] h-[90dvh] ">
         <video
           className="object-cover h-full w-full rounded-3xl"
           autoPlay
@@ -39,14 +39,14 @@ function DinoRescue() {
         </video>
       </div>
 
-      <section className="flex items-center justify-evenly mt-[15em] w-full mb-[10em] gap-[2em] ">
-        <div className="h-[80vh] w-[30vw] ">
+      <section className="flex flex-col md:flex-row items-center justify-evenly mt-[3em] md:mt-[15em] w-full mb-[10em] gap-[2em] ">
+        <div className="h-[80vh] w-[90vw] md:w-[30vw] ">
           <img src={Pic1} className="object-fit h-full w-full rounded-3xl" />
         </div>
-        <div className="h-[80vh] w-[30vw]  flex justify-center">
+        <div className="h-[80vh] w-[90vw] md:w-[30vw]  flex justify-center">
           <img src={Pic2} className="object-fit h-full w-full rounded-3xl" />
         </div>
-        <div className="h-[80vh] w-[30vw]   flex  justify-end">
+        <div className="h-[80vh] w-[90vw] md:w-[30vw]   flex  justify-end">
           <img src={Pic3} className="object-fit h-full w-full rounded-3xl" />
         </div>
       </section>
