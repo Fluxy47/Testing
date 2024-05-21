@@ -66,7 +66,7 @@ function Projects({ setIsVisible, setIsDirect }) {
         slides: { perView: 2, spacing: 5 },
       },
       "(min-width: 1000px)": {
-        slides: { perView: 3, spacing: 10 },
+        slides: { perView: 3, spacing: 25 },
       },
     },
     slides: { perView: 1 },
@@ -76,12 +76,21 @@ function Projects({ setIsVisible, setIsDirect }) {
     <div
       ref={containerRef}
       className="min-h-screen flex flex-col items-center justify-evenly  relative gap-[2em]  pb-[250px] z-[40] ">
-      <section ref={sliderRef} className="keen-slider mt-[8em]">
+      <h2
+        style={{
+          fontSize: " clamp(2.25rem, 1.2796rem + 4.852vw, 5.9375rem)",
+        }}
+        className=" mx-auto mt-[5em] md:mt-0">
+        Work Highlights
+      </h2>
+      <section
+        ref={sliderRef}
+        className="keen-slider mt-[1em] md:mt-[8em] ml-[5px] md:ml-[50px]">
         {arr.map((item, idx) => (
           <div
             onClick={() => handleRoute(item.route)}
             key={idx}
-            className="keen-slider__slide rounded-[60px] cursor-pointer  flex-shrink-0 max-h-[50vh] sm:max-h-[60vh] w-full max-w-[250px] sm:max-w-[450px] panel overflow-visible lg:translate-x-[-80%] 2xl:translate-x-[70%]">
+            className="keen-slider__slide rounded-[60px] cursor-pointer max-h-[510vh] sm:max-h-[50vh] w-full max-w-[250px] sm:max-w-[350px]  ">
             <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[20] text-white text-3xl">
               {item.name}
             </h1>
