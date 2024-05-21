@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useNavigate } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
-function Testing({ setIsDirect, setIsVisible }) {
+function Testing({ setIsDirect, setIsVisible, setText }) {
   const navigate = useNavigate();
   const [sliderRef] = useKeenSlider({
     loop: true,
@@ -68,7 +68,8 @@ function Testing({ setIsDirect, setIsVisible }) {
     });
   }, []);
 
-  const handleRoute = (route) => {
+  const handleRoute = (route, name) => {
+    setText(name);
     setIsDirect(true);
     setIsVisible(true);
     setTimeout(() => {
@@ -140,7 +141,7 @@ function Testing({ setIsDirect, setIsVisible }) {
         <div className="mobileContent">
           <div
             className="mobilePhoto red"
-            onClick={() => handleRoute("/work/SenCity")}></div>
+            onClick={() => handleRoute("/work/SenCity", "SenCity")}></div>
           <h1>Sen City</h1>
           <p>
             Set in the gothic streets of Sen City, players are immersed in a
@@ -153,7 +154,9 @@ function Testing({ setIsDirect, setIsVisible }) {
 
           <div
             className="mobilePhoto green"
-            onClick={() => handleRoute("/work/Scary-Teacher-Stone-Age")}></div>
+            onClick={() =>
+              handleRoute("/work/Scary-Teacher-Stone-Age", "Stone Age")
+            }></div>
           <h1>Scary Teacher Stone Age</h1>
           <p>
             Leading my own project as a designer and developer, I oversaw the
@@ -164,7 +167,9 @@ function Testing({ setIsDirect, setIsVisible }) {
 
           <div
             className="mobilePhoto pink"
-            onClick={() => handleRoute("work/Scary-Teacher")}></div>
+            onClick={() =>
+              handleRoute("work/Scary-Teacher", "Scary Teacher")
+            }></div>
           <h1>Scary Teacher 3D</h1>
           <p>
             My first ever game in the professional industry was working under a
@@ -176,7 +181,7 @@ function Testing({ setIsDirect, setIsVisible }) {
 
           <div
             className="mobilePhoto blue"
-            onClick={() => handleRoute("/work/Jam-Master")}></div>
+            onClick={() => handleRoute("/work/Jam-Master", "Jam Master")}></div>
           <h1>JamMaster</h1>
           <p>
             Jam Master, where players immerse themselves in the delightful world
@@ -187,7 +192,9 @@ function Testing({ setIsDirect, setIsVisible }) {
 
           <div
             className="mobilePhoto yellow"
-            onClick={() => handleRoute("/work/Dino-Rescue")}></div>
+            onClick={() =>
+              handleRoute("/work/Dino-Rescue", "Dino Rescue")
+            }></div>
           <h1>Dino Rescue</h1>
           <p>
             In this project, players drive a truck to capture dinosaurs on the
@@ -204,19 +211,25 @@ function Testing({ setIsDirect, setIsVisible }) {
         <div className="desktopPhotos w-[40vw] h-[40vw] 2xl:w-[30vw] 2xl:h-[30vw]">
           <div
             className="desktopPhoto red"
-            onClick={() => handleRoute("/work/SenCity")}></div>
+            onClick={() => handleRoute("/work/SenCity", "SenCity")}></div>
           <div
             className="desktopPhoto green"
-            onClick={() => handleRoute("/work/Scary-Teacher-Stone-Age")}></div>
+            onClick={() =>
+              handleRoute("/work/Scary-Teacher-Stone-Age", "Stone Age")
+            }></div>
           <div
             className="desktopPhoto pink"
-            onClick={() => handleRoute("work/Scary-Teacher")}></div>
+            onClick={() =>
+              handleRoute("work/Scary-Teacher", "Scary Teacher")
+            }></div>
           <div
             className="desktopPhoto blue"
-            onClick={() => handleRoute("/work/Jam-Master")}></div>
+            onClick={() => handleRoute("/work/Jam-Master", "Jam Master")}></div>
           <div
             className="desktopPhoto yellow"
-            onClick={() => handleRoute("/work/Dino-Rescue")}></div>
+            onClick={() =>
+              handleRoute("/work/Dino-Rescue", "Dino Rescue")
+            }></div>
         </div>
       </div>
     </div>

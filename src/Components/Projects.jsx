@@ -20,32 +20,37 @@ const arr = [
   {
     src: SenCity,
     route: "/work/SenCity",
+    name: "SenCity",
   },
   {
     src: "https://ik.imagekit.io/fluxy/Asad%20Folder/Images/2.png?tr=w-800",
-    Name: "Scary Teacher Stone Age",
+    name: "Stone Age",
     route: "/work/Scary-Teacher-Stone-Age",
   },
   {
     src: JamMaster,
     route: "/work/Jam-Master",
+    name: "Jam Master",
   },
   {
     src: DinoRescue,
     route: "/work/Dino-Rescue",
+    name: "Dino Rescue",
   },
   {
     src: ScaryTeacher,
     route: "/work/Scary-Teacher",
+    name: "ScaryTeacher",
   },
 ];
 
 // mt-[5em] md:mt-[20em]
 
-function Projects({ setIsVisible, setIsDirect }) {
+function Projects({ setIsVisible, setIsDirect, setText }) {
   const navigate = useNavigate();
 
-  const handleRoute = (route) => {
+  const handleRoute = (route, name) => {
+    setText(name);
     setIsDirect(true);
     setIsVisible(true);
     setTimeout(() => {
@@ -88,12 +93,9 @@ function Projects({ setIsVisible, setIsDirect }) {
         className="keen-slider mt-[1em] md:mt-[8em] ml-[5px] md:ml-[50px]">
         {arr.map((item, idx) => (
           <div
-            onClick={() => handleRoute(item.route)}
+            onClick={() => handleRoute(item.route, item.name)}
             key={idx}
             className="keen-slider__slide rounded-[60px] cursor-pointer max-h-[510vh] sm:max-h-[50vh] w-full max-w-[250px] sm:max-w-[350px]  ">
-            <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[20] text-white text-3xl">
-              {item.name}
-            </h1>
             <img
               src={item.src}
               alt=""

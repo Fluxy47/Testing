@@ -3,7 +3,7 @@ import useMouseMovementAnimation from "../util/MouseMoveAnimation";
 import useHoverAnimation from "../util/useHoverAnimation";
 import { useNavigate } from "react-router-dom";
 
-function Footer({ setIsVisible, setIsDirect }) {
+function Footer({ setIsVisible, setIsDirect, setText }) {
   const navigate = useNavigate();
   const circle = useRef(null);
   const Text = useRef(null);
@@ -38,6 +38,7 @@ function Footer({ setIsVisible, setIsDirect }) {
   ];
 
   const handleNavigation = () => {
+    setText("Contact");
     setIsDirect(true);
     setIsVisible(true);
 

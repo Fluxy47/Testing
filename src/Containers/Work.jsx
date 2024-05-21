@@ -221,13 +221,21 @@ function Work({ setIsVisible, setIsDirect, setText }) {
           </section>
         </section> */}
 
-      <Testing setIsVisible={setIsVisible} setIsDirect={setIsDirect} />
+      <Testing
+        setText={setText}
+        setIsVisible={setIsVisible}
+        setIsDirect={setIsDirect}
+      />
       {/* <Projects /> */}
       {/* <Work2 /> */}
       <div
         ref={elementRef}
         className="bg-white w-full h-[500px] rounded-br-[25%] rounded-bl-[25%] absolute z-[39] "></div>
-      <Footer setIsVisible={setIsVisible} setIsDirect={setIsDirect} />
+      <Footer
+        setText={setText}
+        setIsVisible={setIsVisible}
+        setIsDirect={setIsDirect}
+      />
     </div>
   );
 }

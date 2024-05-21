@@ -32,15 +32,16 @@ function Intro({ setText, setIsVisible, setIsDirect }) {
         <h2
           ref={textRef}
           className="text-2xl md:text-3xl 2xl:text-4xl font-[450] text-[#1C1D20]">
-          Helping brands to stand out in the digital era. Together we will set
-          the new status quo. No nonsense, always on the cutting edge.
+          Creating Unforgettable Gaming Experiences. Together, we'll redefine
+          the future of gaming. Innovative, immersive, and always on the cutting
+          edge.
         </h2>
       </div>
       <div className=" flex  justify-evenly md:justify-between items-center sm:ml-[-2.3em]">
         <div className="max-w-[11rem]  sm:max-w-[15rem]">
           <p className="text-[#464444]">
             The combination of my passion for design, code & interaction
-            positions me in a unique place in the web design world.
+            positions me in a unique place in the game design world.
           </p>
         </div>
         <div

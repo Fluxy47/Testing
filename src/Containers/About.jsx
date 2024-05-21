@@ -239,7 +239,11 @@ function About({ setIsVisible, setIsDirect, setText }) {
       <div
         ref={elementRef}
         className="bg-white w-full h-[500px] rounded-br-[25%] rounded-bl-[25%] absolute z-[39] pt-[250px]"></div>
-      <Footer setIsVisible={setIsVisible} setIsDirect={setIsDirect} />
+      <Footer
+        setText={setText}
+        setIsVisible={setIsVisible}
+        setIsDirect={setIsDirect}
+      />
     </div>
   );
 }

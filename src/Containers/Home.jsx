@@ -55,11 +55,19 @@ const Home = ({ setIsVisible, setIsDirect, setText }) => {
         setIsDirect={setIsDirect}
       />
       {/* <Project2 setIsVisible={setIsVisible} setIsDirect={setIsDirect} /> */}
-      <Projects setIsVisible={setIsVisible} setIsDirect={setIsDirect} />
+      <Projects
+        setText={setText}
+        setIsVisible={setIsVisible}
+        setIsDirect={setIsDirect}
+      />
       <div
         ref={elementRef}
         className="bg-white w-full h-[500px] rounded-br-[25%] rounded-bl-[25%] absolute z-[39] "></div>
-      <Footer setIsVisible={setIsVisible} setIsDirect={setIsDirect} />
+      <Footer
+        setText={setText}
+        setIsVisible={setIsVisible}
+        setIsDirect={setIsDirect}
+      />
     </div>
   );
 };
