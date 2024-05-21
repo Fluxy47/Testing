@@ -22,7 +22,7 @@ const arr = [
   { name: "Contact", route: "/Contact" },
 ];
 
-function SideBar({ setIsVisible, setIsDirect }) {
+function SideBar({ setIsVisible, setIsDirect, setText }) {
   const location = useLocation();
   const scrollY = useRef();
   const controls = useAnimation();
@@ -41,7 +41,8 @@ function SideBar({ setIsVisible, setIsDirect }) {
 
   const navigate = useNavigate();
 
-  const handleNavigation = (route) => {
+  const handleNavigation = (route, name) => {
+    setText(name);
     setIsDirect(true);
     setIsVisible(true);
     setIsOpen(false);
@@ -226,7 +227,7 @@ function SideBar({ setIsVisible, setIsDirect }) {
                     className={`w-4 h-4 bg-white rounded-full mt-[10px] absolute left-[-50px]`} // Adjust opacity on hover
                   />
                 ) : null}
-                <button onClick={() => handleNavigation(item.route)}>
+                <button onClick={() => handleNavigation(item.route, item.name)}>
                   <h1
                     ref={elementsRef.current[idx]}
                     style={{

@@ -10,7 +10,7 @@ import Projects from "../Components/Projects";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Home = ({ setIsVisible, setIsDirect }) => {
+const Home = ({ setIsVisible, setIsDirect, setText }) => {
   const location = useLocation();
 
   const elementRef = useRef();
@@ -44,8 +44,16 @@ const Home = ({ setIsVisible, setIsDirect }) => {
 
   return (
     <div className=" relative z-40 ">
-      <Landing setIsVisible={setIsVisible} setIsDirect={setIsDirect} />
-      <Intro />
+      <Landing
+        setText={setText}
+        setIsVisible={setIsVisible}
+        setIsDirect={setIsDirect}
+      />
+      <Intro
+        setText={setText}
+        setIsVisible={setIsVisible}
+        setIsDirect={setIsDirect}
+      />
       {/* <Project2 setIsVisible={setIsVisible} setIsDirect={setIsDirect} /> */}
       <Projects setIsVisible={setIsVisible} setIsDirect={setIsDirect} />
       <div

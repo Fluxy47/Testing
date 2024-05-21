@@ -2,10 +2,10 @@ import React, { useEffect, useRef } from "react";
 import NavBar from "./NavBar";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import pic2 from "../assets/pic2.png";
+import img2 from "../assets/img2.png";
 gsap.registerPlugin(ScrollTrigger);
 
-function Landing({ setIsVisible, setIsDirect }) {
+function Landing({ setIsVisible, setIsDirect, setText }) {
   const elementRef = useRef();
   const elementRef2 = useRef();
   useEffect(() => {
@@ -55,16 +55,17 @@ function Landing({ setIsVisible, setIsDirect }) {
   }, []);
 
   return (
-    <div className="min-h-[100dvh] bg-[#999D9E] relative">
+    <div className="min-h-[100dvh] bg-[#DBD8D3] relative picclass">
       <NavBar
         color="white"
         setIsVisible={setIsVisible}
         setIsDirect={setIsDirect}
+        setText={setText}
       />
-      {/* <img
-        src={pic2}
-        className="mt-[20px] h-[200vh] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-      /> */}
+      <img
+        src={img2}
+        className=" h-[100dvh] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+      />
       <section className="hidden md:flex w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 justify-between ">
         <div
           ref={elementRef}
@@ -80,9 +81,7 @@ function Landing({ setIsVisible, setIsDirect }) {
         <div
           ref={elementRef2}
           className=" mr-[30px] lg:mr-[145px] text-white font-normal tracking-tighter lg:tracking-wider">
-          <h1 className="text-[1.8em] lg:text-[2.4em] lg:mb-[5px]">
-            Freelance
-          </h1>
+          <h1 className="text-[1.8em] lg:text-[2.4em] lg:mb-[5px]">Games</h1>
           <h1 className=" text-[1.8em] lg:text-[2.4em] ">
             Designer & Developer
           </h1>

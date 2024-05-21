@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Testing from "../Components/Testing";
 import useHoverAnimation from "../util/useHoverAnimation";
 
-function Work({ setIsVisible, setIsDirect }) {
+function Work({ setIsVisible, setIsDirect, setText }) {
   const elementRef = useRef();
   useEffect(() => {
     // Select the carousel container using the ref
@@ -54,6 +54,7 @@ function Work({ setIsVisible, setIsDirect }) {
         color="black"
         setIsVisible={setIsVisible}
         setIsDirect={setIsDirect}
+        setText={setText}
       />
       {/* <section
         className="mt-[12em]"
@@ -86,11 +87,9 @@ function Work({ setIsVisible, setIsDirect }) {
           <h1
             className="font-[450] tracking-normal  "
             style={{ fontSize: "calc(clamp(2.4em, 7vw, 8em) * .875)" }}>
-            <span>Helping brands thrive</span>
+            <span>Showcase of </span>
             <br />
-            <span className=" lg:relative bottom-[30px]">
-              in the digital world
-            </span>
+            <span className=" lg:relative bottom-[30px]">My Creations</span>
           </h1>
 
           <div className="bg-[grey] h-[1px]  w-[95%] sm:w-[80%]  mt-[5em] sm:mt-[1em] " />
@@ -99,7 +98,11 @@ function Work({ setIsVisible, setIsDirect }) {
             style={{
               width: "clamp(9em, 13vw, 12em)",
               height: " clamp(9em, 13vw, 12em)",
-            }}></div>
+            }}>
+            <h1 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-[1.5em]">
+              Projects
+            </h1>
+          </div>
         </div>
       </section>
 

@@ -25,8 +25,8 @@ function SenCity() {
       </div>
       <div className="w-full mx-auto flex flex-col items-center justify-center mt-[5em]">
         <h1 className="text-[4em] font-[450]">Visuals</h1>
-        <div className=" w-full max-w-[50vw]">
-          <p className="text-[1.5em]">
+        <div className=" w-full md:max-w-[50vw]">
+          <p className="text-[1.5em] mb-[3em] md:mb-0">
             The board of "Sen City" is designed with a striking gothic dark art
             style, capturing the grim and tense atmosphere of a city in
             disorder. The intricate details and shadowy aesthetics reflect the
@@ -50,8 +50,8 @@ function SenCity() {
 
       <div className="w-full mx-auto flex flex-col items-center justify-center mt-[5em]">
         <h1 className="text-[4em] font-[450]">Factions</h1>
-        <div className=" w-full max-w-[50vw]">
-          <p className="text-[1.5em]">
+        <div className=" w-full md:max-w-[50vw]">
+          <p className="text-[1.5em] mb-[3em] md:mb-0">
             The Sen City is in a state of war. Will you defend as its valiant
             cops or will you play as Mafia, the agents of chaos.Kingpin is the
             Mafia Lord of Sen City trying to infest it with crimes and drugs.

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 // y: animateIn ? "0" : "100%",
-const Overlay = ({ animateIn }) => {
+const Overlay = ({ animateIn, text }) => {
   useEffect(() => {
     // Initial state
     gsap.set(".your-container", {
@@ -52,9 +52,10 @@ const Overlay = ({ animateIn }) => {
       style={{ borderRadius: "0 0 15% 15%" }}>
       <div className="relative flex flex-col h-screen justify-center items-center z-20">
         <section className="block mx-[1em] text-center max-w-[600px] ">
-          <div className="scale-90">
-            <h2 className="leading-[1.15em] tracking-[0] font-[400] text-[2.6em]">
-              Discover your new ambition
+          <div className="scale-90 flex items-center justify-center gap-[1em]">
+            <div className="w-6 h-6 rounded-full bg-white" />
+            <h2 className="leading-[1.15em] tracking-[0] font-[400] text-[5.6em]">
+              {text}
             </h2>
           </div>
         </section>

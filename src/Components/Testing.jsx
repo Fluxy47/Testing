@@ -83,56 +83,53 @@ function Testing({ setIsDirect, setIsVisible }) {
           <div className="desktopContentSection ">
             <h1>Sen City</h1>
             <p>
-              Red is a color often associated with strong emotions such as
-              passion, love, and anger. It's a bold and attention-grabbing color
-              that can evoke feelings of excitement, warmth, and energy.
+              Set in the gothic streets of Sen City, players are immersed in a
+              high-stakes battle for control between the valiant Cops and the
+              cunning Mafia As the city teeters on the edge of chaos, players
+              must navigate the moral complexities of their roles, choosing
+              between upholding justice or succumbing to the allure of power and
+              corruption.
             </p>
           </div>
           <div className="desktopContentSection">
             <h1>Scary Teacher Stone Age</h1>
             <p>
-              Green is a color that is often associated with nature, growth, and
-              harmony. It is a calming and relaxing color that can evoke
-              feelings of balance, stability, and freshness. In color
-              psychology, green is said to represent balance and stability,
-              making it a popular choice for branding and marketing in the
-              health and wellness industry.{" "}
+              Leading my own project as a designer and developer, I oversaw the
+              creation of Scary Teacher StoneAge, the highly anticipated sequel
+              to Scary Teacher 3D. This game marked my first individual
+              milestone in the industry, with a dedicated team working under my
+              guidance.
             </p>
           </div>
           <div className="desktopContentSection">
             <h1>Scary Teacher 3D</h1>
             <p>
-              Pink is a color that is often associated with femininity, romance,
-              and sweetness. It is a softer and more delicate shade of red that
-              can evoke feelings of warmth, love, and nurturing.
-            </p>
-            <p>
-              In the world of branding and marketing, pink is often used to
-              target a female audience or to promote products that are
-              associated with beauty, love, or romance.
+              My first ever game in the professional industry was working under
+              a experienced designer on Scary Teacher 3D. This experience was
+              invaluable, as I gained a deep understanding of the design
+              process. I contributed to the creation of new levels, ensuring
+              they were engaging and challenging for players.
             </p>
           </div>
           <div className="desktopContentSection">
             <h1>JamMaster</h1>
             <p>
-              Blue is a color that is often associated with calmness, trust, and
-              reliability. It is a peaceful and serene color that can evoke
-              feelings of stability, security, and professionalism. In color
-              psychology, blue is said to represent loyalty and trust, making it
-              a popular choice for branding and marketing in the finance and
-              technology industries.
+              Jam Master, where players immerse themselves in the delightful
+              world of fruit farming and jam making. In Jam Master, players
+              plant and harvest various fruits, then transform them into
+              delicious jams to sell to eager customers.
             </p>
           </div>
 
           <div className="desktopContentSection">
             <h1>Dino Rescue</h1>
             <p>
-              Blue is a color that is often associated with calmness, trust, and
-              reliability. It is a peaceful and serene color that can evoke
-              feelings of stability, security, and professionalism. In color
-              psychology, blue is said to represent loyalty and trust, making it
-              a popular choice for branding and marketing in the finance and
-              technology industries.
+              In this project, players drive a truck to capture dinosaurs on the
+              field and safely evacuate them, earning money to upgrade their
+              equipment along the way. The engaging gameplay loop proved to be
+              both fun and challenging, as players had to navigate around
+              dangerous and difficult dinosaurs to succeed. Contributing to this
+              dynamic environment.
             </p>
           </div>
         </div>
@@ -146,9 +143,12 @@ function Testing({ setIsDirect, setIsVisible }) {
             onClick={() => handleRoute("/work/SenCity")}></div>
           <h1>Sen City</h1>
           <p>
-            Red is a color often associated with strong emotions such as
-            passion, love, and anger. It's a bold and attention-grabbing color
-            that can evoke feelings of excitement, warmth, and energy.
+            Set in the gothic streets of Sen City, players are immersed in a
+            high-stakes battle for control between the valiant Cops and the
+            cunning Mafia As the city teeters on the edge of chaos, players must
+            navigate the moral complexities of their roles, choosing between
+            upholding justice or succumbing to the allure of power and
+            corruption.
           </p>
 
           <div
@@ -156,11 +156,10 @@ function Testing({ setIsDirect, setIsVisible }) {
             onClick={() => handleRoute("/work/Scary-Teacher-Stone-Age")}></div>
           <h1>Scary Teacher Stone Age</h1>
           <p>
-            Green is a color that is often associated with nature, growth, and
-            harmony. It is a calming and relaxing color that can evoke feelings
-            of balance, stability, and freshness. In color psychology, green is
-            said to represent balance and stability, making it a popular choice
-            for branding and marketing in the health and wellness industry.{" "}
+            Leading my own project as a designer and developer, I oversaw the
+            creation of Scary Teacher StoneAge, the highly anticipated sequel to
+            Scary Teacher 3D. This game marked my first individual milestone in
+            the industry, with a dedicated team working under my guidance.
           </p>
 
           <div
@@ -168,12 +167,11 @@ function Testing({ setIsDirect, setIsVisible }) {
             onClick={() => handleRoute("work/Scary-Teacher")}></div>
           <h1>Scary Teacher 3D</h1>
           <p>
-            Pink is a color that is often associated with femininity, romance,
-            and sweetness. It is a softer and more delicate shade of red that
-            can evoke feelings of warmth, love, and nurturing. In the world of
-            branding and marketing, pink is often used to target a female
-            audience or to promote products that are associated with beauty,
-            love, or romance.
+            My first ever game in the professional industry was working under a
+            experienced designer on Scary Teacher 3D. This experience was
+            invaluable, as I gained a deep understanding of the design process.
+            I contributed to the creation of new levels, ensuring they were
+            engaging and challenging for players.
           </p>
 
           <div
@@ -181,12 +179,10 @@ function Testing({ setIsDirect, setIsVisible }) {
             onClick={() => handleRoute("/work/Jam-Master")}></div>
           <h1>JamMaster</h1>
           <p>
-            Blue is a color that is often associated with calmness, trust, and
-            reliability. It is a peaceful and serene color that can evoke
-            feelings of stability, security, and professionalism. In color
-            psychology, blue is said to represent loyalty and trust, making it a
-            popular choice for branding and marketing in the finance and
-            technology industries.
+            Jam Master, where players immerse themselves in the delightful world
+            of fruit farming and jam making. In Jam Master, players plant and
+            harvest various fruits, then transform them into delicious jams to
+            sell to eager customers.
           </p>
 
           <div
@@ -194,12 +190,12 @@ function Testing({ setIsDirect, setIsVisible }) {
             onClick={() => handleRoute("/work/Dino-Rescue")}></div>
           <h1>Dino Rescue</h1>
           <p>
-            Blue is a color that is often associated with calmness, trust, and
-            reliability. It is a peaceful and serene color that can evoke
-            feelings of stability, security, and professionalism. In color
-            psychology, blue is said to represent loyalty and trust, making it a
-            popular choice for branding and marketing in the finance and
-            technology industries.
+            In this project, players drive a truck to capture dinosaurs on the
+            field and safely evacuate them, earning money to upgrade their
+            equipment along the way. The engaging gameplay loop proved to be
+            both fun and challenging, as players had to navigate around
+            dangerous and difficult dinosaurs to succeed. Contributing to this
+            dynamic environment.
           </p>
         </div>
 

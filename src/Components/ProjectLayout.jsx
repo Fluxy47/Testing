@@ -16,7 +16,7 @@ import useDrivePicker from "react-google-drive-picker";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function ProjectLayout({ setIsVisible, setIsDirect }) {
+function ProjectLayout({ setIsVisible, setIsDirect, setText }) {
   const [currentProject, setCurrentProject] = useState(null);
   console.log("project", currentProject);
   const location = useLocation();
@@ -72,9 +72,13 @@ function ProjectLayout({ setIsVisible, setIsDirect }) {
 
   return (
     <div className="min-h-screen text-black ">
-      <NavBar setIsVisible={setIsVisible} setIsDirect={setIsDirect} />
+      <NavBar
+        setText={setText}
+        setIsVisible={setIsVisible}
+        setIsDirect={setIsDirect}
+      />
       <div className="flex flex-col  justify-center  items-center mt-[13em]  mx-auto ">
-        <h1 className="md:text-[5em] xl:text-[8em] leading-tight  self-start mx-auto">
+        <h1 className="text-[2.2em] md:text-[5em] xl:text-[8em] leading-tight  self-start mx-auto">
           {currentProject?.name}
         </h1>
 

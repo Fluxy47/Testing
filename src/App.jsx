@@ -26,6 +26,7 @@ function App() {
   const location = useLocation();
   const [isVisible, setIsVisible] = useState(false);
   const [isDirect, setIsDirect] = useState(false);
+  const [text, setText] = useState("");
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -56,26 +57,39 @@ function App() {
     // setIsVisible(true);
     setTimeout(() => {
       setIsVisible(false);
+      setText("");
     }, 500);
   }, [location.pathname]);
 
   return (
     <>
       {!isDirect && <Duck />}
-      {isVisible && <Overlay animateIn={isDirect ? true : false} />}
-      <SideBar setIsVisible={setIsVisible} setIsDirect={setIsDirect} />
+      {isVisible && <Overlay text={text} animateIn={isDirect ? true : false} />}
+      <SideBar
+        setText={setText}
+        setIsVisible={setIsVisible}
+        setIsDirect={setIsDirect}
+      />
       <AnimatePresence mode="wait">
         <Routes>
           <Route
             path="/"
             element={
-              <Home setIsVisible={setIsVisible} setIsDirect={setIsDirect} />
+              <Home
+                setText={setText}
+                setIsVisible={setIsVisible}
+                setIsDirect={setIsDirect}
+              />
             }
           />
           <Route
             path="/work"
             element={
-              <Work setIsVisible={setIsVisible} setIsDirect={setIsDirect} />
+              <Work
+                setText={setText}
+                setIsVisible={setIsVisible}
+                setIsDirect={setIsDirect}
+              />
             }
           />
           <Route
@@ -90,13 +104,21 @@ function App() {
           <Route
             path="/about"
             element={
-              <About setIsVisible={setIsVisible} setIsDirect={setIsDirect} />
+              <About
+                setText={setText}
+                setIsVisible={setIsVisible}
+                setIsDirect={setIsDirect}
+              />
             }
           />
           <Route
             path="/contact"
             element={
-              <Contact setIsVisible={setIsVisible} setIsDirect={setIsDirect} />
+              <Contact
+                setText={setText}
+                setIsVisible={setIsVisible}
+                setIsDirect={setIsDirect}
+              />
             }
           />
         </Routes>

@@ -41,7 +41,7 @@ export const ProjectArr = [
     genre: "Hyper-casual",
     role: "Design & Development",
     Intro:
-      "Leading my own project as a designer and developer, I oversaw the creation of Scary Teacher StoneAge, the highly anticipated sequel to Scary Teacher 3D. This game marked my first individual milestone in the industry, with a dedicated team working under my guidance. I was deeply involved in every aspect of the game, from the architecture and level designs to the soundscapes that brought the prehistoric setting to life. With enhanced graphics, more polished gameplay mechanics, and exciting new content, Scary Teacher StoneAge offered a fresh yet familiar experience for fans of the original. My leadership and meticulous attention to detail paid off, as the game not only successfully launched but also achieved an impressive 5 million downloads. This accomplishment demonstrated my ability to lead a project from conception to success, solidifying my reputation in the game development field.",
+      "Jam Master, where players immerse themselves in the delightful world of fruit farming and jam making. In Jam Master, players plant and harvest various fruits, then transform them into delicious jams to sell to eager customers. The money earned from sales can be reinvested to upgrade machines and hire helpers, enhancing efficiency and productivity. The gameplay loop is both engaging and satisfying, as players balance the tasks of farming, production, and sales to build a thriving jam-making empire. My role involved designing intuitive mechanics and crafting levels that kept players hooked, ensuring a fun and rewarding experience that encouraged strategic planning and resource management.",
   },
 
   {

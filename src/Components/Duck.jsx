@@ -37,7 +37,7 @@ function Duck() {
         <section className="block mx-[1em] text-center max-w-[600px] ">
           <div className="scale-90">
             <h2 className="leading-[1.15em] tracking-[0] font-[400] text-[2.6em]">
-              Discover your new ambition
+              Hello! Welcome to my Portfolio
             </h2>
           </div>
         </section>

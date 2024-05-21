@@ -3,8 +3,10 @@ import useMouseMovementAnimation from "../util/MouseMoveAnimation";
 import gsap from "gsap";
 import useHoverAnimation from "../util/useHoverAnimation";
 import useTextEffect from "../util/useTextEffect";
+import { useNavigate } from "react-router-dom";
 
-function Intro() {
+function Intro({ setText, setIsVisible, setIsDirect }) {
+  const navigate = useNavigate();
   const circle = useRef(null);
   const Text = useRef(null);
   const textRef = useRef(null);
@@ -14,6 +16,15 @@ function Intro() {
   const TextAnimate = useMouseMovementAnimation(Text);
   useHoverAnimation(circle, overlayRef);
   useTextEffect(textRef, "gray", "black");
+
+  const handleNavigation = () => {
+    setText("About");
+    setIsDirect(true);
+    setIsVisible(true);
+    setTimeout(() => {
+      navigate("/About");
+    }, 1500);
+  };
 
   return (
     <div className="  md:overflow-visible flex flex-col md:flex-row justify-center  items-center mx-[10px] md:mx-[40px] lg:mx-auto gap-[1em] md:gap-[4em] mt-[2em] md:mt-[8em]  md:mb-[20em] relative">
@@ -33,11 +44,12 @@ function Intro() {
           </p>
         </div>
         <div
+          onClick={handleNavigation}
           ref={circleAnimate}
           className=" w-32 h-32 relative top-[3em] md:top-0 sm:w-48 sm:h-48 rounded-full bg-[#1C1D20] md:mt-[15em] lg:mt-[12em]  md:absolute flex items-center justify-center overflow-hidden cursor-pointer">
           <div
             ref={overlayRef}
-            className="w-48 h-48 absolute  bg-[blue] rounded-full translate-y-full"
+            className="w-48 h-48 absolute  bg-[#455CE9] rounded-full translate-y-full"
           />
           <h2
             ref={TextAnimate}

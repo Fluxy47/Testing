@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import useMouseMovementAnimation from "../util/MouseMoveAnimation";
 
-function NavBar({ color, setIsVisible, setIsDirect }) {
+function NavBar({ color, setIsVisible, setIsDirect, setText }) {
   const navigate = useNavigate();
   const Home = useRef(null);
   const myref = useRef(null);
@@ -29,7 +29,8 @@ function NavBar({ color, setIsVisible, setIsDirect }) {
   // refs.forEach((ref) => useMouseMovementAnimation(ref));
   const HomeAnimate = useMouseMovementAnimation(Home);
 
-  const handleNavigation = (route) => {
+  const handleNavigation = (route, name) => {
+    setText(name);
     setIsDirect(true);
     setIsVisible(true);
     setTimeout(() => {
@@ -42,7 +43,7 @@ function NavBar({ color, setIsVisible, setIsDirect }) {
       className={` flex justify-between pt-[30px] md:pt-[35px] text-[${color}]`}>
       <div ref={HomeAnimate} className="p-3">
         <h2
-          onClick={() => handleNavigation("/")}
+          onClick={() => handleNavigation("/", "Home")}
           className="ml-3 md:ml-10 tracking-wider font-bold  md:text-xl cursor-pointer">
           Home
         </h2>
@@ -51,7 +52,7 @@ function NavBar({ color, setIsVisible, setIsDirect }) {
         {arr.map((item, idx) => (
           <div key={idx} className="" ref={item.ref}>
             <h2
-              onClick={() => handleNavigation(item.route)}
+              onClick={() => handleNavigation(item.route, item.name)}
               className="text-xl font-bold tracking-wider cursor-pointer">
               {item.name}
             </h2>

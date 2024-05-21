@@ -2,15 +2,32 @@ import React, { useRef } from "react";
 import NavBar from "../Components/NavBar";
 import useMouseMovementAnimation from "../util/MouseMoveAnimation";
 import useHoverAnimation from "../util/useHoverAnimation";
+import img3 from "../assets/img3.png";
 const arr = ["twitter", "insta", "LinkedIn"];
 
-function Contact({ setIsVisible, setIsDirect }) {
+function Contact({ setIsVisible, setIsDirect, setText }) {
   const circle = useRef(null);
   const Text = useRef(null);
   const overlayRef = useRef();
 
   const circleAnimate = useMouseMovementAnimation(circle);
   const TextAnimate = useMouseMovementAnimation(Text);
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    // Access the form element
+    const form = document.getElementById("myForm");
+
+    // Submit the form (this triggers form validation if any)
+    form.submit();
+
+    // Clear the form after successful submission (assuming success)
+    form.reset();
+
+    // Display a message (you can use an alert or other methods)
+    alert("Email sent!");
+  };
   useHoverAnimation(circle, overlayRef);
   return (
     <div className="h-full bg-[#1c1d20] relative pb-[200px] min-h-screen">
@@ -18,19 +35,23 @@ function Contact({ setIsVisible, setIsDirect }) {
         color="white"
         setIsVisible={setIsVisible}
         setIsDirect={setIsDirect}
+        setText={setText}
       />
-      <section className="flex flex-row-reverse md:flex-row md:justify-center mt-[12em] gap-[10em]">
-        <div className="w-full md:max-w-[55em] ml-[30px]">
+      <section className="flex flex-row-reverse md:flex-row md:justify-center mt-[12em]  2xl:gap-[10em]">
+        <div className="w-full md:max-w-[30em] 2xl:max-w-[55em] ml-[30px] ">
           <h1
             className="text-white leading-[1] "
             style={{ fontSize: "calc(clamp(3em, 7vw, 8em) * .875)" }}>
             Let's Start a Project Together
           </h1>
         </div>
-        <div className="hidden sm:block w-32 h-32 bg-white rounded-full md:mt-[100px]" />
+        <img
+          src={img3}
+          className="hidden sm:block w-32 h-32 bg-white object-cover rounded-full md:mt-[100px] mr-[120px]"
+        />
       </section>
       <main className="flex flex-col-reverse md:flex-row justify-center gap-[5em] md:gap-[10em] mx-[2em]">
-        <section className="flex flex-col w-full md:max-w-[50vw] gap-[3em]  md:mt-[8em] ">
+        <form className="flex flex-col w-full md:max-w-[50vw] gap-[3em]  md:mt-[8em] ">
           <div className="h-[1px] w-full bg-[#adb4b6] " />
           <div className="flex flex-col gap-[1em]">
             <div className="flex gap-[3em]">
@@ -103,6 +124,7 @@ function Contact({ setIsVisible, setIsDirect }) {
           <div className="w-full flex flex-col relative">
             <div className="h-[1px] w-full bg-[#adb4b6] " />
             <div
+              onClick={handleSubmit}
               ref={circleAnimate}
               className="w-40 h-40 rounded-full bg-[lightblue] absolute top-[-5em] right-10 flex items-center justify-center overflow-hidden cursor-pointer">
               <div
@@ -116,7 +138,7 @@ function Contact({ setIsVisible, setIsDirect }) {
               </h2>
             </div>
           </div>
-        </section>
+        </form>
 
         <section className="flex flex-col gap-[3em] mb-auto mt-[4em] md:mt-[8em]">
           <div className="flex flex-col gap-[0.5em] text-base text-white">

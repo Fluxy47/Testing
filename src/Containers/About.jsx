@@ -7,15 +7,21 @@ import pic from "../assets/pic.jpg";
 import aboutpic from "../assets/aboutpic.jpg";
 import { transform } from "framer-motion";
 import { useMediaQuery } from "@uidotdev/usehooks";
+import useMouseMovementAnimation from "../util/MouseMoveAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function About({ setIsVisible, setIsDirect }) {
+function About({ setIsVisible, setIsDirect, setText }) {
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
   const Cont = useRef(null);
   const imageRef = useRef(null);
   const imageCont = useRef(null);
   const elementRef = useRef();
+  const circleRef = useRef();
+  const Text = useRef();
+
+  const circleAnimate = useMouseMovementAnimation(circleRef);
+  const TextAnimate = useMouseMovementAnimation(Text);
 
   useEffect(() => {
     const container = imageCont.current;
@@ -96,6 +102,7 @@ function About({ setIsVisible, setIsDirect }) {
         color="black"
         setIsVisible={setIsVisible}
         setIsDirect={setIsDirect}
+        setText={setText}
       />
 
       <section className="w-full lg:max-w-[90vw] mx-auto ">
@@ -103,29 +110,45 @@ function About({ setIsVisible, setIsDirect }) {
           <h1
             className="font-[450] tracking-normal  "
             style={{ fontSize: "calc(clamp(2.4em, 7vw, 8em) * .875)" }}>
-            <span>Helping brands thrive</span>
+            <span>From Player to Creator</span>
             <br />
             <span className=" lg:relative bottom-[30px]">
-              in the digital world
+              My Passion for Game Design
             </span>
           </h1>
 
-          <div className="bg-[grey] h-[1px]  w-[95%] sm:w-[80%]  mt-[5em] sm:mt-[1em] " />
-          <div
+          <div className="bg-[grey] h-[1px]  w-[95%] sm:w-[80%]  mt-[5em] sm:mt-[3em] " />
+          <a
+            ref={circleAnimate}
+            href="https://drive.google.com/drive/folders/18xyS7LY4qZ-oWw70C1dsUFB62gHovIIk?usp=sharing"
+            target="_blank"
             className="rounded-[50%] overflow-hidden bg-[#455CE9] relative top-0 left-[20%] sm:left-[40%] lg:left-[55%] translate-x-1/2 -translate-y-1/2"
             style={{
               width: "clamp(9em, 13vw, 12em)",
               height: " clamp(9em, 13vw, 12em)",
-            }}></div>
+            }}>
+            <h1
+              ref={TextAnimate}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-[2em]">
+              CV
+            </h1>
+          </a>
 
-          <section className="min-h-screen flex flex-col lg:flex-row mt-[-3em] lg:mt-[8em] justify-start items-center w-[90vw] mx-auto gap-[4em] lg:gap-x-[8em] sm:ml-[20px] ">
-            <div className="flex flex-col  w-full max-w-[90%] lg:max-w-[16em] gap-[1em] lg:self-start mt-[3em]">
-              <p className="font-medium text-[#313232]">
-                I help companies from all over the world with tailor-made
-                solutions. With each project, I push my work to new horizons,
-                always putting quality first.
+          <section className=" min-h-screen flex flex-col lg:flex-row mt-[-3em] lg:mt-[8em] justify-start items-center w-[90vw] mx-auto gap-[4em] lg:gap-x-[8em] sm:ml-[20px] relative right-[10%]">
+            <div className="flex flex-col  w-full max-w-[90%] lg:max-w-[30em] gap-[1em] lg:self-start mt-[3em]">
+              <p className="font-medium text-[#313232] text-[1.2em]">
+                I am a dedicated game designer and developer with a profound
+                passion for creating immersive gaming experiences. With two
+                years of professional experience, I have successfully published
+                four games, each reflecting my commitment to innovation and
+                quality. My expertise lies in utilizing Unity, but I am eager to
+                explore other game engines and technologies as opportunities
+                arise. As a passionate gamer, my love for games fuels my
+                creativity and drives me to continually push the boundaries of
+                game design. My goal is to craft engaging, memorable experiences
+                that captivate players and leave a lasting impact on the gaming
+                community.
               </p>
-              <span>Always exploring</span>
             </div>
             <div
               ref={imageCont}
@@ -157,13 +180,16 @@ function About({ setIsVisible, setIsDirect }) {
                 <p className="text-[#adb4b6] text-[0.8em]">01</p>
                 <div className="h-[1px] w-full bg-[#adb4b6] " />
                 <h2 className=" text-[2em] md:text-[3vw] 2xl:text-[2.5vw] font-[450]">
-                  Design
+                  Games Design
                 </h2>{" "}
                 <div className="w-full max-w-[50em]">
                   <p className="md:text-[2vw] lg:text-[1.7vw] xl:text-[1.5vw] 2xl:text-[1.25vw]">
-                    With a solid track record in designing websites and apps, I
-                    deliver strong and user-friendly digital designs. Solid
-                    company branding is the foundation of any succesful website.
+                    I specialize in crafting engaging and innovative game
+                    concepts, ensuring that each project delivers a unique and
+                    captivating player experience. My services include
+                    comprehensive game design documentation, mechanic
+                    development, and creative direction to bring your vision to
+                    life.
                   </p>
                 </div>
               </div>
@@ -171,16 +197,18 @@ function About({ setIsVisible, setIsDirect }) {
 
             <div className=" md:h-screen flex items-center justify-center ">
               <div className="  w-full md:max-w-[29em] 2xl:max-w-[33em] flex flex-col gap-[1em] justify-start">
-                <p className="text-[#adb4b6] text-[0.8em]">01</p>
+                <p className="text-[#adb4b6] text-[0.8em]">02</p>
                 <div className="h-[1px] w-full bg-[#adb4b6] " />
                 <h2 className=" text-[2em] md:text-[3vw] 2xl:text-[2.5vw] font-[450]">
-                  Design
+                  Level Design
                 </h2>{" "}
                 <div className="w-full max-w-[50em]">
                   <p className="md:text-[2vw] lg:text-[1.7vw] xl:text-[1.5vw] 2xl:text-[1.25vw]">
-                    With a solid track record in designing websites and apps, I
-                    deliver strong and user-friendly digital designs. Solid
-                    company branding is the foundation of any succesful website.
+                    I provide expert level design services, creating immersive
+                    and challenging environments that enhance gameplay and keep
+                    players invested. From initial layout to intricate
+                    detailing, I focus on designing levels that are both
+                    visually stunning and strategically sound.
                   </p>
                 </div>
               </div>
@@ -188,16 +216,18 @@ function About({ setIsVisible, setIsDirect }) {
 
             <div className=" md:h-screen flex items-center justify-center ">
               <div className="  w-full md:max-w-[29em] 2xl:max-w-[33em] flex flex-col gap-[1em] justify-start">
-                <p className="text-[#adb4b6] text-[0.8em]">01</p>
+                <p className="text-[#adb4b6] text-[0.8em]">03</p>
                 <div className="h-[1px] w-full bg-[#adb4b6] " />
                 <h2 className=" text-[2em] md:text-[3vw] 2xl:text-[2.5vw] font-[450]">
-                  Design
+                  Game Development
                 </h2>{" "}
                 <div className="w-full max-w-[50em]">
                   <p className="md:text-[2vw] lg:text-[1.7vw] xl:text-[1.5vw] 2xl:text-[1.25vw]">
-                    With a solid track record in designing websites and apps, I
-                    deliver strong and user-friendly digital designs. Solid
-                    company branding is the foundation of any succesful website.
+                    With extensive experience in Unity and a readiness to
+                    explore other engines, I offer full-cycle game development
+                    services. From coding and prototyping to final polish and
+                    deployment, I ensure your game runs smoothly and meets the
+                    highest standards of quality.
                   </p>
                 </div>
               </div>
