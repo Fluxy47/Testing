@@ -55,8 +55,8 @@ function Work({ setIsVisible, setIsDirect }) {
         setIsVisible={setIsVisible}
         setIsDirect={setIsDirect}
       />
-      <section
-        className=" mt-[12em]"
+      {/* <section
+        className="mt-[12em]"
         style={{
           paddingLeft: `calc(clamp(clamp(2.5em, 8vw, 8em)) * 2)`,
           paddingRight: "calc(clamp(2.5em, 8vw, 8em)) * 2)",
@@ -79,6 +79,28 @@ function Work({ setIsVisible, setIsDirect }) {
             width: "clamp(9em, 13vw, 12em)",
             height: " clamp(9em, 13vw, 12em)",
           }}></div>
+      </section> */}
+
+      <section className="w-full lg:max-w-[90vw] mx-auto ">
+        <div className="flex  flex-col items-start justify-start w-full mx-[25px] lg:ml-[11em] mt-[8em] ">
+          <h1
+            className="font-[450] tracking-normal  "
+            style={{ fontSize: "calc(clamp(2.4em, 7vw, 8em) * .875)" }}>
+            <span>Helping brands thrive</span>
+            <br />
+            <span className=" lg:relative bottom-[30px]">
+              in the digital world
+            </span>
+          </h1>
+
+          <div className="bg-[grey] h-[1px]  w-[95%] sm:w-[80%]  mt-[5em] sm:mt-[1em] " />
+          <div
+            className="rounded-[50%] overflow-hidden bg-[#455CE9] relative top-0 left-[20%] sm:left-[40%] lg:left-[55%] translate-x-1/2 -translate-y-1/2"
+            style={{
+              width: "clamp(9em, 13vw, 12em)",
+              height: " clamp(9em, 13vw, 12em)",
+            }}></div>
+        </div>
       </section>
 
       {/* <section className="border-2 border-black flex w-[70vw] justify-between ">

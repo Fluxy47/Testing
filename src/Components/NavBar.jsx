@@ -58,7 +58,9 @@ function NavBar({ color, setIsVisible, setIsDirect }) {
           </div>
         ))}
       </div>
-      <h2 className="tracking-wider font-bold md:hidden mr-3">Menu</h2>
+      {/* <h2 className="tracking-wider mt-[12px] font-bold md:hidden mr-3">
+        Menu
+      </h2> */}
     </section>
   );
 }
