@@ -3,6 +3,10 @@ import Main from "../assets/JamMaster/Main.png";
 // import Vid1 from "../assets/JamMaster/Vid1.mp4";
 // import Vid2 from "../assets/JamMaster/Vid2.mp4";
 // import Vid3 from "../assets/JamMaster/Vid3.mp4";
+import Video from "../assets/JamMaster/Video.mp4";
+import pic1 from "../assets/JamMaster/pic1.png";
+import pic2 from "../assets/JamMaster/pic2.png";
+import pic3 from "../assets/JamMaster/pic3.png";
 
 function JamMaster() {
   return (
@@ -17,51 +21,15 @@ function JamMaster() {
         />
       </div>
 
-      {/* <div className="flex justify-center items-center mt-[15em] min-h-screen ">
-        <video
-          className="w-full max-w-[85vw] h-full border-4 border-black rounded-3xl"
-          autoPlay
-          loop
-          muted
-          playsInline
-          controls={true}>
-          <source src={gameplay} type="video/mp4" />
-        </video>
-      </div> */}
-
-      <section className="flex items-center justify-evenly mt-[15em] w-full mb-[10em] ">
+      <section className="flex items-center justify-evenly mt-[15em] w-full mb-[10em] gap-[2em]">
         <div className="h-[80vh] w-[30vw] ">
-          <video
-            className="object-cover h-full rounded-3xl"
-            autoPlay
-            loop
-            muted
-            playsInline
-            controls={true}>
-            {/* <source src={Vid1} type="video/mp4" /> */}
-          </video>
+          <img src={pic1} className="object-fit h-full w-full rounded-3xl" />
         </div>
         <div className="h-[80vh] w-[30vw]  flex justify-center">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            controls={true}
-            className="object-cover h-full rounded-3xl">
-            {/* <source src={Vid2} type="video/mp4" /> */}
-          </video>
+          <img src={pic2} className="object-fit h-full w-full rounded-3xl" />
         </div>
         <div className="h-[80vh] w-[30vw]   flex  justify-end">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            controls={true}
-            className="object-cover h-full rounded-3xl">
-            {/* <source src={Vid3} type="video/mp4" /> */}
-          </video>
+          <img src={pic3} className="object-fit h-full w-full rounded-3xl" />
         </div>
       </section>
     </div>

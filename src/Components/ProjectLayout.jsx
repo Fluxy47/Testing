@@ -69,6 +69,7 @@ function ProjectLayout({ setIsVisible, setIsDirect }) {
 
   const [openPicker, authResponse] = useDrivePicker();
   // const customViewsArray = [new google.picker.DocsView()]; // custom view
+
   const handleOpenPicker = () => {
     openPicker({
       clientId:
@@ -90,6 +91,8 @@ function ProjectLayout({ setIsVisible, setIsDirect }) {
     });
   };
 
+  console.log("hi", currentProject?.link);
+
   return (
     <div className="min-h-screen text-black ">
       <NavBar setIsVisible={setIsVisible} setIsDirect={setIsDirect} />
@@ -107,23 +110,19 @@ function ProjectLayout({ setIsVisible, setIsDirect }) {
           <div className="flex flex-col gap-[2em] items-start  w-full max-w-[20em]">
             <p className="text-[0.7em] text-[#999D9E]">Genre</p>
             <div className="h-[1px] w-full bg-[#999D9E]" />
-            <h2 className="text-base font-semibold">3D Simulation</h2>
+            <h2 className="text-base font-semibold">{currentProject?.genre}</h2>
           </div>
-          <div className="w-52 h-52 bg-[blue] rounded-full flex justify-center items-center cursor-pointer">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.zatg.scaryteacher.stoneage&gl=GB"
-              target="_blank"
-              className="text-white font-semibold">
-              {currentProject?.status}
-            </a>
-          </div>
+          <a
+            href={currentProject?.link}
+            target="_blank"
+            className="w-52 h-52 bg-[#455CE9] rounded-full flex justify-center items-center cursor-pointer">
+            <a className="text-white font-semibold">{currentProject?.status}</a>
+          </a>
         </section>
       </div>
 
       <div className=" w-[80vw] mx-auto mt-[5em] text-lg">
-        <h1>{currentProject?.Intro}</h1>
-
-        <h1>{currentProject?.Intro}</h1>
+        <h1 className="text-3xl font-[450]">{currentProject?.Intro}</h1>
       </div>
       {path === "SenCity" && <SenCity />}
       {path === "Scary-Teacher-Stone-Age" && <StoneAge />}

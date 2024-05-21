@@ -4,9 +4,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Main from "../assets/StoneAge/Main.png";
-// import Vid2 from "../assets/StoneAge/Vid2.mp4";
-// import Vid3 from "../assets/StoneAge/Vid3.mp4";
-// import Vid1 from "../assets/StoneAge/Vid1.mp4";
+import pic1 from "../assets/StoneAge/pic1.png";
+import pic2 from "../assets/StoneAge/pic2.png";
+import pic3 from "../assets/StoneAge/pic3.png";
+import pic4 from "../assets/StoneAge/pic4.png";
+import Video from "../assets/StoneAge/Video.mp4";
 gsap.registerPlugin(ScrollTrigger);
 
 function StoneAge() {
@@ -67,46 +69,27 @@ function StoneAge() {
           muted
           playsInline
           controls={true}>
-          <source
-            src="https://drive.google.com/file/d/1ru0r8wKKGvH3_gScgbNQrsw6D6IJYnTI/view"
-            type="video/mp4"
-          />
+          <source src={Video} type="video/mp4" />
         </video>
       </div>
 
-      <section className="flex items-center justify-evenly mt-[15em] w-full mb-[5em]">
-        <div className="h-[80vh] w-[27vw]">
-          <video
-            className="object-cover h-full rounded-3xl"
-            autoPlay
-            loop
-            muted
-            playsInline
-            controls={true}>
-            {/* <source src={Vid2} type="video/mp4" /> */}
-          </video>
+      <section className="flex items-center justify-evenly mt-[15em] w-full mb-[10em] ">
+        <div className="h-[80vh] w-[40vw] ">
+          <img src={pic1} className="object-fit h-full w-full rounded-3xl" />
         </div>
-        <div className="h-[80vh] w-[27vw] ]">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            controls={true}
-            className="object-cover h-full rounded-3xl">
-            {/* <source src={Vid3} type="video/mp4" /> */}
-          </video>
+        <div className="h-[80vh] w-[40vw]  flex justify-center">
+          {" "}
+          <img src={pic2} className="object-fit h-full w-full rounded-3xl" />
         </div>
-        <div className="h-[80vh] w-[27vw] ">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            controls={true}
-            className="object-cover h-full rounded-3xl">
-            {/* <source src={Vid1} type="video/mp4" /> */}
-          </video>
+      </section>
+
+      <section className="flex items-center justify-evenly mt-[15em] w-full mb-[10em] ">
+        <div className="h-[80vh] w-[40vw] ">
+          <img src={pic3} className="object-fit h-full w-full rounded-3xl" />
+        </div>
+        <div className="h-[80vh] w-[40vw]  flex justify-center">
+          {" "}
+          <img src={pic4} className="object-fit h-full w-full rounded-3xl" />
         </div>
       </section>
     </div>
