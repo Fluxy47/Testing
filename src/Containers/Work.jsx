@@ -224,7 +224,7 @@ function Work({ setIsVisible, setIsDirect }) {
       <div
         ref={elementRef}
         className="bg-white w-full h-[500px] rounded-br-[25%] rounded-bl-[25%] absolute z-[39] "></div>
-      <Footer />
+      <Footer setIsVisible={setIsVisible} setIsDirect={setIsDirect} />
     </div>
   );
 }

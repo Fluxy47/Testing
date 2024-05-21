@@ -39,14 +39,14 @@ function DinoRescue() {
         </video>
       </div>
 
-      <section className="flex flex-col md:flex-row items-center justify-evenly mt-[3em] md:mt-[15em] w-full mb-[10em] gap-[2em] ">
+      <section className="flex flex-col md:flex-row items-center justify-evenly mt-[3em] md:mt-[15em] w-full  gap-[2em] ">
         <div className="h-[80vh] w-[90vw] md:w-[30vw] ">
           <img src={Pic1} className="object-fit h-full w-full rounded-3xl" />
         </div>
         <div className="h-[80vh] w-[90vw] md:w-[30vw]  flex justify-center">
           <img src={Pic2} className="object-fit h-full w-full rounded-3xl" />
         </div>
-        <div className="h-[80vh] w-[90vw] md:w-[30vw]   flex  justify-end">
+        <div className="h-[80vh] w-[90vw] md:w-[30vw]  flex  justify-end">
           <img src={Pic3} className="object-fit h-full w-full rounded-3xl" />
         </div>
       </section>

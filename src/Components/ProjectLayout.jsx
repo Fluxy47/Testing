@@ -29,7 +29,7 @@ function ProjectLayout({ setIsVisible, setIsDirect }) {
       (project) => project.identifier === path
     );
     setCurrentProject(matchingProject);
-  }, []); // Update only when path changes
+  }, [pathname]); // Update only when path changes
 
   const handleRoute = (route) => {
     setIsDirect(true);
@@ -68,7 +68,7 @@ function ProjectLayout({ setIsVisible, setIsDirect }) {
     };
   }, []);
 
-  console.log("hi", currentProject?.link);
+  console.log("hi", currentProject?.name);
 
   return (
     <div className="min-h-screen text-black ">
@@ -83,7 +83,7 @@ function ProjectLayout({ setIsVisible, setIsDirect }) {
             <p className="text-[0.7em] text-[#999D9E]">ROLE / SERVICES</p>
             <div className="h-[1px] w-full bg-[#adb4b6]" />
             <h2 className=" text-[0.8em] md:text-base font-semibold">
-              Design & Development
+              {currentProject?.role}
             </h2>
           </div>
           <div className="flex flex-col gap-[2em] items-start  w-full md:max-w-[20em]">
@@ -93,12 +93,12 @@ function ProjectLayout({ setIsVisible, setIsDirect }) {
               {currentProject?.genre}
             </h2>
           </div>
-          {/* <a
+          <a
             href={currentProject?.link}
             target="_blank"
             className="w-52 h-52 bg-[#455CE9] rounded-full flex justify-center items-center cursor-pointer">
             <a className="text-white font-semibold">{currentProject?.status}</a>
-          </a> */}
+          </a>
         </section>
       </div>
 

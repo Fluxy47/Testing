@@ -1,8 +1,10 @@
 import React, { useRef } from "react";
 import useMouseMovementAnimation from "../util/MouseMoveAnimation";
 import useHoverAnimation from "../util/useHoverAnimation";
+import { useNavigate } from "react-router-dom";
 
-function Footer() {
+function Footer({ setIsVisible, setIsDirect }) {
+  const navigate = useNavigate();
   const circle = useRef(null);
   const Text = useRef(null);
   const circle2 = useRef();
@@ -34,6 +36,16 @@ function Footer() {
       route: "https://www.instagram.com/smoky_ma7/",
     },
   ];
+
+  const handleNavigation = () => {
+    setIsDirect(true);
+    setIsVisible(true);
+
+    setTimeout(() => {
+      navigate("/Contact");
+    }, 1500);
+  };
+
   return (
     <section className="h-screen absolute  bg-[#1c1d20] w-full ">
       <div className="w-[80vw] mx-auto flex flex-col gap-[5em] pt-[6em]">
@@ -47,6 +59,7 @@ function Footer() {
         <div className="w-full flex flex-col relative">
           <div className="h-[1px] w-full bg-[#adb4b6] " />
           <a
+            onClick={handleNavigation}
             ref={circleAnimate}
             className="w-40 h-40 rounded-full bg-[#455CE9]  absolute top-[-5em] right-10 flex items-center justify-center cursor-pointer">
             <h1
