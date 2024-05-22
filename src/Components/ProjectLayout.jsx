@@ -31,14 +31,6 @@ function ProjectLayout({ setIsVisible, setIsDirect, setText }) {
     setCurrentProject(matchingProject);
   }, [pathname]); // Update only when path changes
 
-  const handleRoute = (route) => {
-    setIsDirect(true);
-    setIsVisible(true);
-    setTimeout(() => {
-      navigate(route);
-    }, 1500);
-  };
-
   const elementRef = useRef();
 
   useEffect(() => {

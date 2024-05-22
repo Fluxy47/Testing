@@ -98,6 +98,7 @@ function App() {
               <ProjectLayout
                 setIsVisible={setIsVisible}
                 setIsDirect={setIsDirect}
+                setText={setText}
               />
             }
           />
