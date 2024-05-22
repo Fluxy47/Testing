@@ -96,7 +96,7 @@ function Footer({ setIsVisible, setIsDirect, setText }) {
             <span
               ref={TextAnimate3}
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              + 44 7774069318
+              +44 7774069318
             </span>
           </button>
         </div>
