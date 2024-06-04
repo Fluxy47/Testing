@@ -12,16 +12,13 @@ import ScaryTeacher from "../layouts/ScaryTeacher";
 import SenCity from "../layouts/SenCity";
 import StoneAge from "../layouts/StoneAge";
 
-import useDrivePicker from "react-google-drive-picker";
-
 gsap.registerPlugin(ScrollTrigger);
 
 function ProjectLayout({ setIsVisible, setIsDirect, setText }) {
   const [currentProject, setCurrentProject] = useState(null);
-  console.log("project", currentProject);
   const location = useLocation();
   const pathname = location.pathname;
-  console.log("asd", pathname);
+
   let path = pathname.substring(6);
 
   useEffect(() => {
@@ -32,6 +29,7 @@ function ProjectLayout({ setIsVisible, setIsDirect, setText }) {
   }, [pathname]); // Update only when path changes
 
   const elementRef = useRef();
+  console.log("ref", elementRef);
 
   useEffect(() => {
     // Select the carousel container using the ref
@@ -40,15 +38,12 @@ function ProjectLayout({ setIsVisible, setIsDirect, setText }) {
     // Create a timeline for the animations
     const tl = gsap.timeline();
 
-    // Set initial position
-    gsap.set(element, { y: "-20%" });
-
     // Add animation to the timeline
     tl.to(element, {
       y: "-=70%",
       scrollTrigger: {
         trigger: element,
-        scrub: 0.5,
+        scrub: 1,
       },
     });
 
@@ -59,8 +54,6 @@ function ProjectLayout({ setIsVisible, setIsDirect, setText }) {
       ScrollTrigger.getAll().forEach((instance) => instance.kill());
     };
   }, []);
-
-  console.log("hi", currentProject?.name);
 
   return (
     <div className="min-h-screen text-black ">
@@ -93,7 +86,9 @@ function ProjectLayout({ setIsVisible, setIsDirect, setText }) {
             href={currentProject?.link}
             target="_blank"
             className="w-52 h-52 bg-[#455CE9] rounded-full flex justify-center items-center cursor-pointer">
-            <a className="text-white font-semibold">{currentProject?.status}</a>
+            <span className="text-white font-semibold">
+              {currentProject?.status}
+            </span>
           </a>
         </section>
       </div>
@@ -111,9 +106,11 @@ function ProjectLayout({ setIsVisible, setIsDirect, setText }) {
 
       <div
         ref={elementRef}
-        className="bg-white w-full h-[500px] rounded-br-[25%] rounded-bl-[25%] absolute z-[39] "></div>
+        className="bg-white w-[110%] h-[500px] rounded-br-[25%] rounded-bl-[25%] -ml-24 absolute z-[39] pt-[10em]"
+      />
       <Footer2
         route={currentProject?.nextRoute}
+        setText={setText}
         setIsVisible={setIsVisible}
         setIsDirect={setIsDirect}
         img={currentProject?.img}

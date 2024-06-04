@@ -6,22 +6,19 @@ import { useGSAP } from "@gsap/react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-function Footer2({ route, setIsVisible, setIsDirect, img, name }) {
+function Footer2({ route, setIsVisible, setIsDirect, img, name, setText }) {
   const [isHover, setIsHover] = useState(false);
   const navigate = useNavigate();
 
-  const arr = [
-    {
-      name: "LinkedIn",
-      route: "https://www.linkedin.com/in/muhammadd-asad/",
-    },
-    {
-      name: "Insta",
-      route: "https://www.instagram.com/smoky_ma7/",
-    },
-  ];
+  const circle = useRef(null);
+  const overlayRef = useRef();
+
+  const circleAnimate = useMouseMovementAnimation(circle);
+
+  useHoverAnimation(circleAnimate, overlayRef);
 
   const handleNavigation = () => {
+    setText(name);
     setIsDirect(true);
     setIsVisible(true);
     setTimeout(() => {
@@ -30,6 +27,7 @@ function Footer2({ route, setIsVisible, setIsDirect, img, name }) {
   };
 
   const handleNavigation2 = () => {
+    setText("Work");
     setIsDirect(true);
     setIsVisible(true);
     setTimeout(() => {
@@ -61,10 +59,22 @@ function Footer2({ route, setIsVisible, setIsDirect, img, name }) {
           />
         </div>
         <div className="absolute bottom-[1em] z-[99999]  bg-[#1c1d20] border-t-2 border-[grey]  w-[80%] h-[40vh] flex items-center justify-center mt-[10em] ">
-          <button
+          {/* <button
             onClick={handleNavigation2}
             className="rounded-full w-44 h-[5rem] border-2 border-[grey] text-white cursor-pointer">
             All Work
+          </button> */}
+          <button
+            ref={circleAnimate}
+            className="w-44 h-[5rem]  relative rounded-full border-[1px] bg-transparent text-white font-[450] text-lg overflow-hidden">
+            <div
+              ref={overlayRef}
+              className="w-full h-full relative  bg-[#455CE9] rounded-full translate-y-full"
+            />
+
+            <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              All Work
+            </span>
           </button>
         </div>
       </section>

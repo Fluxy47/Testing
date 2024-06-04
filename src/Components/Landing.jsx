@@ -80,7 +80,7 @@ function Landing({ setIsVisible, setIsDirect, setText }) {
         </div>
         <div
           ref={elementRef2}
-          className=" mr-[30px] lg:mr-[145px] text-white font-normal tracking-tighter lg:tracking-wider">
+          className=" mr-[30px] 2xl:mr-[145px] text-white font-normal tracking-tighter lg:tracking-wider">
           <h1 className="text-[1.8em] lg:text-[2.4em] lg:mb-[5px]">Games</h1>
           <h1 className=" text-[1.8em] lg:text-[2.4em] ">
             Designer & Developer

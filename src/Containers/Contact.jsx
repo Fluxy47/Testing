@@ -37,8 +37,8 @@ function Contact({ setIsVisible, setIsDirect, setText }) {
         setIsDirect={setIsDirect}
         setText={setText}
       />
-      <section className="flex flex-row-reverse md:flex-row md:justify-center mt-[12em]  2xl:gap-[10em]">
-        <div className="w-full md:max-w-[30em] 2xl:max-w-[55em] ml-[30px] ">
+      <section className=" flex flex-row-reverse md:flex-row md:justify-center items-center mt-[12em]  2xl:gap-[10em]">
+        <div className="w-full md:max-w-[30em] lg:max-w-[50em] 2xl:max-w-[55em] ml-[30px] ">
           <h1
             className="text-white leading-[1] "
             style={{ fontSize: "calc(clamp(3em, 7vw, 8em) * .875)" }}>

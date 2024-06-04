@@ -3,17 +3,28 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import Main from "../assets/StoneAge/Main.png";
-import pic1 from "../assets/StoneAge/pic1.png";
-import pic2 from "../assets/StoneAge/pic2.png";
-import pic3 from "../assets/StoneAge/pic3.png";
-import pic4 from "../assets/StoneAge/pic4.png";
-import Video from "../assets/StoneAge/Video.mp4";
 gsap.registerPlugin(ScrollTrigger);
+import { Cloudinary } from "@cloudinary/url-gen/index";
+
+import { AdvancedVideo } from "@cloudinary/react";
 
 function StoneAge() {
   const videoRef = useRef(null);
   const [hasPlayed, setHasPlayed] = useState(false);
+
+  const cld = new Cloudinary({ cloud: { cloudName: "ddymdla6h" } });
+
+  // Apply the transformation.
+  // myVideo
+  //   .resize(
+  //     fill()
+  //       .width(150)
+  //       .height(150)
+  //       .gravity(
+  //         Gravity.autoGravity().autoFocus(AutoFocus.focusOn(FocusOn.faces()))
+  //       )
+  //   ) // Crop the video, focusing on the faces.
+  //   .roundCorners(byRadius(20)); // Round the corners.
 
   // useEffect(() => {
   //   gsap.registerPlugin(ScrollTrigger);
@@ -62,34 +73,46 @@ function StoneAge() {
       </div>
 
       <div className="flex justify-center items-center md:mt-[15em] min-h-screen ">
-        <video
+        <AdvancedVideo
           className="w-full max-w-[90vw] md:max-w-[85vw] h-full border-4 border-black rounded-3xl"
+          cldVid={cld.video("AsadPortfolio/StoneAgeVid").quality("auto")}
+          controls
           autoPlay
           loop
           muted
           playsInline
-          controls={true}>
-          <source src={Video} type="video/mp4" />
-        </video>
+        />
       </div>
 
-      <section className="flex flex-col md:flex-row items-center justify-evenly gap-y-[3em] md:mt-[15em] w-full mb-[10em] ">
+      <section className="flex flex-col md:flex-row items-center justify-evenly gap-y-[3em] md:mt-[15em] w-full ">
         <div className="h-[80vh] w-[90vw] md:w-[40vw] ">
-          <img src={pic1} className="object-fit h-full w-full rounded-3xl" />
+          <img
+            src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/pic1(1).png?tr=w-800"
+            className="object-fit h-full w-full rounded-3xl"
+          />
         </div>
         <div className="h-[80vh] w-[90vw] md:w-[40vw] flex justify-center">
           {" "}
-          <img src={pic2} className="object-fit h-full w-full rounded-3xl" />
+          <img
+            src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/pic2.png?tr=w-800"
+            className="object-fit h-full w-full rounded-3xl"
+          />
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row items-center justify-evenly gap-y-[3em] md:mt-[15em] w-full mb-[10em] ">
+      <section className="flex flex-col md:flex-row items-center justify-evenly gap-y-[3em] md:mt-[15em] w-full ">
         <div className="h-[80vh] w-[90vw] md:w-[40vw] ">
-          <img src={pic3} className="object-fit h-full w-full rounded-3xl" />
+          <img
+            src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/pic3.png?tr=w-800"
+            className="object-fit h-full w-full rounded-3xl"
+          />
         </div>
         <div className="h-[80vh] w-[90vw] md:w-[40vw]  flex justify-center">
           {" "}
-          <img src={pic4} className="object-fit h-full w-full rounded-3xl" />
+          <img
+            src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/pic4(1).png?tr=w-800"
+            className="object-fit h-full w-full rounded-3xl"
+          />
         </div>
       </section>
     </div>

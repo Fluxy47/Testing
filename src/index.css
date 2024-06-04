@@ -206,30 +206,35 @@
 }
 
 .green {
-  background: url("https://ik.imagekit.io/fluxy/Asad%20Folder/Images/2.png?tr=w-600,h-600");
-  background-repeat: no-repeat;
+  background: url("https://ik.imagekit.io/fluxy/Asad%20Folder/Images/2.png?tr=w-1700")
+    no-repeat center center;
+  background-size: 100% 100%; /* Optional: Ensure the image covers the entire div */
   cursor: pointer;
+  object-fit: contain;
 }
 
 .blue {
-  background: url("https://ik.imagekit.io/fluxy/Asad%20Folder/Images/image_2022_04_18T10_54_30_850Z.png?tr=w-800")
+  background: url("https://ik.imagekit.io/fluxy/Asad%20Folder/Images/image_2022_04_18T10_54_30_850Z.png?tr=w-1700")
     no-repeat center center;
-  background-size: cover; /* Optional: Ensure the image covers the entire div */
+  background-size: 100% 100%; /* Optional: Ensure the image covers the entire div */
   cursor: pointer;
+  object-fit: contain;
 }
 
 .pink {
-  background: url("https://ik.imagekit.io/fluxy/Asad%20Folder/Images/3d.png?tr=w-800")
+  background: url("https://ik.imagekit.io/fluxy/Asad%20Folder/Images/3d.png?tr=w-1700")
     no-repeat center center;
-  background-size: cover; /* Optional: Ensure the image covers the entire div */
+  background-size: 100% 100%; /* Optional: Ensure the image covers the entire div */
   cursor: pointer;
+  object-fit: contain;
 }
 
 .yellow {
-  background: url("https://ik.imagekit.io/fluxy/Asad%20Folder/Images/Dino%20Rescue%20(2).png?tr=w-800")
+  background: url("https://ik.imagekit.io/fluxy/Asad%20Folder/Images/Dino%20Rescue%20(2).png?tr=w-1700")
     no-repeat center center;
-  background-size: cover; /* Optional: Ensure the image covers the entire div */
+  background-size: 100% 100%; /* Optional: Ensure the image covers the entire div */
   cursor: pointer;
+  object-fit: contain;
 }
 
 /* small screen / mobile layout */

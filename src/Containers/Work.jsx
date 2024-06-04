@@ -83,18 +83,18 @@ function Work({ setIsVisible, setIsDirect, setText }) {
       </section> */}
 
       <section className="w-full lg:max-w-[90vw] mx-auto ">
-        <div className="flex  flex-col items-start justify-start w-full mx-[25px] lg:ml-[11em] mt-[8em] ">
+        <div className="flex flex-col items-start justify-center w-full mx-[25px]  mt-[8em] 2xl:mt-[15em] ">
           <h1
-            className="font-[450] tracking-normal  "
+            className="font-[450] tracking-normal ml-5 "
             style={{ fontSize: "calc(clamp(2.4em, 7vw, 8em) * .875)" }}>
             <span>Showcase of </span>
-            <br />
-            <span className=" lg:relative bottom-[30px]">My Creations</span>
+
+            <span>My Creations</span>
           </h1>
 
-          <div className="bg-[grey] h-[1px]  w-[95%] sm:w-[80%]  mt-[5em] sm:mt-[1em] " />
+          <div className="bg-[grey] h-[1px]  w-[95%] sm:w-[80%] lg:w-[90%]  mt-[5em] sm:mt-[2em] lg:mt-[6em] 2xl:mt-[10em] " />
           <div
-            className="rounded-[50%] overflow-hidden bg-[#455CE9] relative top-0 left-[20%] sm:left-[40%] lg:left-[55%] translate-x-1/2 -translate-y-1/2"
+            className="rounded-[50%] overflow-hidden bg-[#455CE9] relative top-0 left-[20%] sm:left-[40%] lg:left-[65%] translate-x-1/2 -translate-y-1/2"
             style={{
               width: "clamp(9em, 13vw, 12em)",
               height: " clamp(9em, 13vw, 12em)",

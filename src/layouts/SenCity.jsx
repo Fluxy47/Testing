@@ -21,7 +21,10 @@ function SenCity() {
       <div className="w-full mx-auto flex flex-col items-center justify-center mt-[5em]">
         <h1 className="text-[4em] font-[450]">Game Concept</h1>
 
-        <img src={pic1} className="" />
+        <img
+          src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/pic1.png?updatedAt=1717505495674"
+          className=""
+        />
       </div>
       <div className="w-full mx-auto flex flex-col items-center justify-center mt-[5em]">
         <h1 className="text-[4em] font-[450]">Visuals</h1>
@@ -37,12 +40,18 @@ function SenCity() {
 
         <section className="flex flex-col md:flex-row items-center justify-evenly  md:mt-[15em] w-full mb-[10em] gap-y-[3em] md:gap-y-0 ">
           <div className="h-[80vh] w-[90vw] md:w-[40vw] flex flex-col items-center justify-center gap-y-[2em]">
-            <img src={pic2} className="object-fit h-full w-full rounded-3xl" />
+            <img
+              src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/pic2.jpg?tr=w-1200"
+              className="object-fit h-full w-full rounded-3xl"
+            />
             <h1 className="text-[2em]">Movement path of the game</h1>
           </div>
           <div className="h-[80vh] w-[90vw] md:w-[40vw] flex flex-col items-center justify-center gap-y-[2em]">
             {" "}
-            <img src={pic3} className="object-fit h-full w-full rounded-3xl" />
+            <img
+              src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/pic3.jpg?updatedAt=1717505495691"
+              className="object-fit h-full w-full rounded-3xl"
+            />
             <h1 className="text-[2em]"> Board layout of the game</h1>
           </div>
         </section>
@@ -60,15 +69,18 @@ function SenCity() {
           </p>
         </div>
 
-        <section className="flex flex-col md:flex-row items-center justify-evenly  md:mt-[15em] w-full mb-[10em] gap-y-[3em] md:gap-y-0 ">
+        <section className="flex flex-col md:flex-row items-center justify-evenly  md:mt-[15em] w-full gap-y-[3em] md:gap-y-0 ">
           <div className="h-[80vh] w-[90vw] md:w-[40vw] flex flex-col items-center justify-center gap-y-[2em]">
-            <img src={pic4} className="object-fit h-full w-full rounded-3xl" />
+            <img
+              src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/pic4.png?updatedAt=1717505495695"
+              className="object-fit h-full w-full rounded-3xl"
+            />
             <h1 className="text-[2em]">Cops "The Sheriff"</h1>
           </div>
           <div className="h-[80vh] w-[90vw] md:w-[40vw] flex flex-col items-center justify-center gap-y-[2em]">
             {" "}
             <img
-              src={pic5}
+              src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/pic5.jpg?tr=w-1200"
               className="object-fit h-full w-full rounded-3xl mb-[75px]"
             />
             <h1 className="text-[2em]">Mafia "The Kingpin" </h1>

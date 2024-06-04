@@ -12,8 +12,12 @@ import Pic2 from "../assets/DinoRescue/pic2.png";
 import Pic3 from "../assets/DinoRescue/pic3.png";
 
 import Video from "../assets/DinoRescue/Video.mp4";
+import { Cloudinary } from "@cloudinary/url-gen/index";
+import { AdvancedVideo } from "@cloudinary/react";
 
 function DinoRescue() {
+  const cld = new Cloudinary({ cloud: { cloudName: "ddymdla6h" } });
+
   return (
     <div className="pb-[250px] max-w-[85vw] mx-auto">
       <div className="flex justify-center items-center mt-[7em] min-h-screen relative">
@@ -28,26 +32,37 @@ function DinoRescue() {
       </div>
 
       <div className="flex justify-center items-center md:mt-[15em] mt-[3em] max-w-[85vw] h-[90dvh] ">
-        <video
+        <AdvancedVideo
           className="object-cover h-full w-full rounded-3xl"
+          cldVid={cld
+            .video("AsadPortfolio/pjgpu3nmfatmnmhwgm0t")
+            .quality("auto")}
+          controls
           autoPlay
           loop
           muted
           playsInline
-          controls={true}>
-          <source src={Video} type="video/mp4" />
-        </video>
+        />
       </div>
 
       <section className="flex flex-col md:flex-row items-center justify-evenly mt-[3em] md:mt-[15em] w-full  gap-[2em] ">
         <div className="h-[80vh] w-[90vw] md:w-[30vw] ">
-          <img src={Pic1} className="object-fit h-full w-full rounded-3xl" />
+          <img
+            src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/pic1(3).png?tr=w-800"
+            className="object-fit h-full w-full rounded-3xl"
+          />
         </div>
         <div className="h-[80vh] w-[90vw] md:w-[30vw]  flex justify-center">
-          <img src={Pic2} className="object-fit h-full w-full rounded-3xl" />
+          <img
+            src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/pic2(2).png?tr=w-800"
+            className="object-fit h-full w-full rounded-3xl"
+          />
         </div>
         <div className="h-[80vh] w-[90vw] md:w-[30vw]  flex  justify-end">
-          <img src={Pic3} className="object-fit h-full w-full rounded-3xl" />
+          <img
+            src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/pic3(2).png?tr=w-800"
+            className="object-fit h-full w-full rounded-3xl"
+          />
         </div>
       </section>
     </div>

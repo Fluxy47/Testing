@@ -21,15 +21,24 @@ function JamMaster() {
         />
       </div>
 
-      <section className="flex flex-col md:flex-row items-center justify-evenly mt-[3em] md:mt-[15em] w-full  gap-[2em]">
+      <section className="flex flex-col md:flex-row items-center justify-evenly mt-[3em] md:mt-[15em] w-full  gap-[2em] ">
         <div className="h-[80vh] w-[90vw] md:w-[30vw] ">
-          <img src={pic1} className="object-fit h-full w-full rounded-3xl" />
+          <img
+            src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/pic1(2).png?tr=w-800"
+            className="object-fit h-full w-full rounded-3xl"
+          />
         </div>
         <div className="h-[80vh] w-[90vw] md:w-[30vw]   flex justify-center">
-          <img src={pic2} className="object-fit h-full w-full rounded-3xl" />
+          <img
+            src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/pic2(1).png?tr=w-800"
+            className="object-fit h-full w-full rounded-3xl"
+          />
         </div>
         <div className="h-[80vh] w-[90vw] md:w-[30vw]   flex  justify-end">
-          <img src={pic3} className="object-fit h-full w-full rounded-3xl" />
+          <img
+            src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/pic3(1).png?tr=w-800"
+            className="object-fit h-full w-full rounded-3xl"
+          />
         </div>
       </section>
     </div>

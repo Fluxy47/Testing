@@ -106,7 +106,7 @@ function About({ setIsVisible, setIsDirect, setText }) {
       />
 
       <section className="w-full lg:max-w-[90vw] mx-auto ">
-        <div className="flex  flex-col items-start justify-start w-full mx-[25px] lg:ml-[11em] mt-[8em] ">
+        <div className="flex  flex-col items-start justify-start w-full mx-[25px] mt-[8em] ">
           <h1
             className="font-[450] tracking-normal  "
             style={{ fontSize: "calc(clamp(2.4em, 7vw, 8em) * .875)" }}>
@@ -117,12 +117,12 @@ function About({ setIsVisible, setIsDirect, setText }) {
             </span>
           </h1>
 
-          <div className="bg-[grey] h-[1px]  w-[95%] sm:w-[80%]  mt-[5em] sm:mt-[3em] " />
+          <div className="bg-[grey] h-[1px]  w-[95%] sm:w-[80%] lg:w-[95%]  mt-[5em] sm:mt-[3em] lg:mt-[5em] " />
           <a
             ref={circleAnimate}
             href="https://drive.google.com/drive/folders/18xyS7LY4qZ-oWw70C1dsUFB62gHovIIk?usp=sharing"
             target="_blank"
-            className="rounded-[50%] overflow-hidden bg-[#455CE9] relative top-0 left-[20%] sm:left-[40%] lg:left-[55%] translate-x-1/2 -translate-y-1/2"
+            className="rounded-[50%] overflow-hidden bg-[#455CE9] relative top-0 left-[20%] sm:left-[40%] lg:left-[65%] translate-x-1/2 -translate-y-1/2"
             style={{
               width: "clamp(9em, 13vw, 12em)",
               height: " clamp(9em, 13vw, 12em)",
@@ -134,7 +134,7 @@ function About({ setIsVisible, setIsDirect, setText }) {
             </h1>
           </a>
 
-          <section className=" min-h-screen flex flex-col lg:flex-row mt-[-3em] lg:mt-[8em] justify-start items-center w-[90vw] mx-auto gap-[4em] lg:gap-x-[8em] sm:ml-[20px] relative right-[10%]">
+          <section className=" min-h-screen flex flex-col lg:flex-row mt-[-3em] lg:mt-[8em] justify-start items-center w-full mx-auto gap-[4em] lg:gap-x-[8em]  relative ">
             <div className="flex flex-col  w-full max-w-[90%] lg:max-w-[30em] gap-[1em] lg:self-start mt-[3em]">
               <p className="font-medium text-[#313232] text-[1.2em]">
                 I am a dedicated game designer and developer with a profound
@@ -152,11 +152,11 @@ function About({ setIsVisible, setIsDirect, setText }) {
             </div>
             <div
               ref={imageCont}
-              className="overflow-hidden border-2 border-red-950 w-full lg:max-w-[60%] mr-[15px] flex justify-center">
+              className="overflow-hidden border-2 border-red-950 w-full lg:max-w-[60%] mr-[15px] flex justify-center min-h-screen">
               <img
                 ref={imageRef}
                 src="https://ik.imagekit.io/fluxy/Asad%20Folder/Images/aboutpic.jpg?tr=w-1200"
-                className=" w-full"
+                className=" w-full h-full object-fill"
               />
             </div>
           </section>

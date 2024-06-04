@@ -19,6 +19,7 @@ import Contact from "./Containers/Contact";
 import ProjectLayout from "./Components/ProjectLayout";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollToTop from "./util/ScrollToTop";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,6 +28,15 @@ function App() {
   const [isVisible, setIsVisible] = useState(false);
   const [isDirect, setIsDirect] = useState(false);
   const [text, setText] = useState("");
+
+  // const cld = new Cloudinary({ cloud: { cloudName: "ddymdla6h" } });
+
+  // // Use this sample image or upload your own via the Media Explorer
+  // const img = cld
+  //   .image("cld-sample-5")
+  //   .format("auto") // Optimize delivery by resizing and applying auto-format and auto-quality
+  //   .quality("auto")
+  //   .resize(auto().gravity(autoGravity()).width(500).height(500)); // Transform the image: auto-crop to square aspect_ratio
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -61,10 +71,16 @@ function App() {
     }, 500);
   }, [location.pathname]);
 
+  useEffect(() => {
+    window.history.scrollRestoration = "manual";
+  }, []);
+
   return (
     <>
+      <ScrollToTop />
       {!isDirect && <Duck />}
       {isVisible && <Overlay text={text} animateIn={isDirect ? true : false} />}
+
       <SideBar
         setText={setText}
         setIsVisible={setIsVisible}
